@@ -87,7 +87,7 @@ $item_category = getOne($one_category_query);
                 </div>
             </div>
             <div class="mt-10 flex flex-col space-y-3">
-                <button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"> MUA NGAY </button>
+                <a href="../../controller/add_to_cart.php"><button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"> MUA NGAY </button></a>
                 <div class="flex justify-between">
                     <div class="basis-[48%]">
                         <button class="w-full rounded-full border border-purple-800 text-purple-800 font-light text-xl py-3"> MUA TRẢ GÓP 0% </button>
@@ -212,13 +212,11 @@ $item_category = getOne($one_category_query);
         </div>
 
     </div>
-
-
 </div>
 <div id="bodylast" class="min-h-[100vh] absolute inset-y-0">
 </div>
 <!-- Cart -->
-<div id="shoppingcart" class="fixed block top-0 r-0 w-[500px] min-h-[100vh] absolute inset-y-0 right-[100%] bg-white">
+<!-- <div id="shoppingcart" class="fixed block top-0 r-0 w-[500px] min-h-[100vh] absolute inset-y-0 right-[100%] bg-white">
     <div class="w-[500px] justify-items-end">
         <div class="w-[500px] mx-auto h-10 border-b-2 flex">
             <div class="mx-auto w-[90px] text-center border-b-4 border-[#662d91] text-xl font-semibold">Giỏ hàng</div>
@@ -277,9 +275,9 @@ $item_category = getOne($one_category_query);
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Cart -->
-<script>
+<!-- <script>
     const btnCart = document.querySelector("#btnCart")
     const btnClose = document.querySelector("#closeCart")
     const shoppingCart = document.querySelector("#shoppingcart")
@@ -314,4 +312,4 @@ $item_category = getOne($one_category_query);
         document.querySelector("body").classList.remove("overflow-hidden")
 
     })
-</script>
+</script> -->

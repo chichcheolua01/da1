@@ -35,4 +35,5 @@ if (isset($_GET['act'])) {
 } else {
     include './content.php';
 }
+include './cart.php';
 include './footer.php';

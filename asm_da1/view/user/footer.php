@@ -32,6 +32,6 @@
 </footer>
 
 </body>
-<!-- <script src="../main.js"></script> -->
+<script src="../../main/cart.js"></script>
 
 </html>

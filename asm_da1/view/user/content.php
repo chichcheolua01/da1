@@ -1,15 +1,14 @@
 <body class="">
-
   <!-- Product Hot -->
   <div class="mx-auto max-w-screen-xl">
     <div class="flex justify-around items-center mb-7 mt-4">
-      <h2 class="text-xl tracking-widest text-gray-900 pb-2 underline underline-offset-8 decoration-2 decoration-purple-900 grow">
+      <h2 class="text-xl tracking-widest text-gray-800 pb-2 underline underline-offset-8 decoration-2 decoration-purple-800 grow">
         SẢN PHẨM BÁN CHẠY</h2>
       <div class="space-x-3">
-        <button class="bg-purple-900 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-        <button class="bg-purple-900 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-        <button class="bg-purple-900 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-        <button class="bg-purple-900 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
+        <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
+        <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
+        <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
+        <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
       </div>
     </div>
     <div class="grid mx-auto text-center grid-cols-4 gap-4 ">
@@ -56,7 +55,7 @@
   <a href="" class="flex relative mx-auto w-[358px] container text-center my-4">
     <span class="border rounded-3xl px-6 py-2">XEM THÊM SẢN PHẨM ĐỒNG HỒ ĐEO TAY
     </span>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-0 text-purple-900 top-2">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-0 text-purple-800 top-2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
     </svg>
   </a>
@@ -65,7 +64,7 @@
   <!-- Why choose us -->
   <div class="bg-gray-100">
     <div class="text-center">
-      <h2 class="text-xl tracking-widest text-gray-900 pt-6 underline underline-offset-8 decoration-2 decoration-purple-900 grow my-8">VÌ SAO CHỌN CHÚNG TÔI</h2>
+      <h2 class="text-xl tracking-widest text-gray-800 pt-6 underline underline-offset-8 decoration-2 decoration-purple-800 grow my-8">VÌ SAO CHỌN CHÚNG TÔI</h2>
     </div>
     <div class="grid grid-cols-4 container gap-6 mx-auto pb-6 font-bold text-xl tracking-wide">
       <div class="flex items-center justify-evenly">
@@ -79,7 +78,7 @@
       <div class="flex items-center">
         <img src="../../image/icon3.png" alt="">
         <span>THAY PIN MIỄN PHÍ<br>TRỌN ĐỜI</span>
-      </div>
+      </div>                                 
       <div class="flex items-center">
         <img src="../../image/icon4.png" alt="">
         <span>HỖ TRỢ TRẢ GÓP<br> TRẢ GÓP 0%</span>
@@ -87,10 +86,10 @@
     </div>
   </div>
   <!-- Why choose us  end-->
-  <div id="bodylast" class="min-h-[100vh] absolute inset-y-0">
-  </div>
+  <!-- <div id="bodylast" class="min-h-[100vh] absolute inset-y-0">
+  </div> -->
   <!-- Cart -->
-  <div id="shoppingcart" class="fixed block top-0 r-0 w-[500px] min-h-[100vh] absolute inset-y-0 right-[100%] bg-white">
+  <!-- <div id="shoppingcart" class="fixed block top-0 r-0 w-[500px] min-h-[100vh] absolute inset-y-0 right-[100%] bg-white">
     <div class="w-[500px] justify-items-end">
       <div class="w-[500px] mx-auto h-10 border-b-2 flex">
         <div class="mx-auto w-[90px] text-center border-b-4 border-[#662d91] text-xl font-semibold">Giỏ hàng</div>
@@ -149,42 +148,42 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- Cart -->
   <script>
-    const btnCart = document.querySelector("#btnCart")
-    const btnClose = document.querySelector("#closeCart")
-    const shoppingCart = document.querySelector("#shoppingcart")
+    // const btnCart = document.querySelector("#btnCart")
+    // const btnClose = document.querySelector("#closeCart")
+    // const shoppingCart = document.querySelector("#shoppingcart")
 
-    console.log(shoppingCart.className);
-    btnCart.addEventListener('click', function() {
-      console.log("hehe");
-      const openCart = shoppingCart.classList
-      openCart.remove("right-[100%]")
-      openCart.add("right-36")
-      openCart.add("transition")
-      document.querySelector("#bodylast").classList.add("bg-gray-600")
-      document.querySelector("#bodylast").classList.add("w-[1400px]")
-      document.querySelector("#bodylast").classList.add("opacity-25")
-      document.querySelector("body").classList.add("overflow-hidden")
-    })
-    btnClose.addEventListener('click', function() {
-      const closeCart = shoppingCart.classList
-      closeCart.add("right-[100%]")
-      closeCart.remove("right-36")
-      document.querySelector("#bodylast").classList.remove("bg-gray-600")
-      document.querySelector("#bodylast").classList.remove("w-[1400px]")
-      document.querySelector("body").classList.remove("overflow-hidden")
-    })
-    document.querySelector("#bodylast").addEventListener('click', function() {
-      console.log("hahahah");
-      const closeCart = shoppingCart.classList
-      closeCart.add("right-[100%]")
-      closeCart.remove("right-36")
-      document.querySelector("#bodylast").classList.remove("bg-gray-600")
-      document.querySelector("#bodylast").classList.remove("w-[1400px]")
-      document.querySelector("body").classList.remove("overflow-hidden")
+    // console.log(shoppingCart.className);
+    // btnCart.addEventListener('click', function() {
+    //   console.log("hehe");
+    //   const openCart = shoppingCart.classList
+    //   openCart.remove("right-[100%]")
+    //   openCart.add("right-36")
+    //   openCart.add("transition")
+    //   document.querySelector("#bodylast").classList.add("bg-gray-600")
+    //   document.querySelector("#bodylast").classList.add("w-[1400px]")
+    //   document.querySelector("#bodylast").classList.add("opacity-25")
+    //   document.querySelector("body").classList.add("overflow-hidden")
+    // })
+    // btnClose.addEventListener('click', function() {
+    //   const closeCart = shoppingCart.classList
+    //   closeCart.add("right-[100%]")
+    //   closeCart.remove("right-36")
+    //   document.querySelector("#bodylast").classList.remove("bg-gray-600")
+    //   document.querySelector("#bodylast").classList.remove("w-[1400px]")
+    //   document.querySelector("body").classList.remove("overflow-hidden")
+    // })
+    // document.querySelector("#bodylast").addEventListener('click', function() {
+    //   console.log("hahahah");
+    //   const closeCart = shoppingCart.classList
+    //   closeCart.add("right-[100%]")
+    //   closeCart.remove("right-36")
+    //   document.querySelector("#bodylast").classList.remove("bg-gray-600")
+    //   document.querySelector("#bodylast").classList.remove("w-[1400px]")
+    //   document.querySelector("body").classList.remove("overflow-hidden")
 
-    })
+    // })
   </script>
 </body>

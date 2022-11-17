@@ -1,12 +1,12 @@
 
 <div class="container mx-auto">
     <h2
-        class="text-xl tracking-widest text-gray-900 font-bold p-2 underline underline-offset-[12px] decoration-2 decoration-purple-900 text-center">
+        class="text-xl tracking-widest text-gray-800 font-bold p-2 underline underline-offset-[12px] decoration-2 decoration-purple-800 text-center">
         THANH TOÁN</h2>
     <div class="grid grid-cols-3 grid-flow-row-dense gap-4 border-t-2 my-3">
         <!-- Box right -->
         <div class="col-span-2 border shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5">
-            <a href=""><button class="bg-purple-900 text-white py-1 px-8 rounded-3xl my-4 ">ĐĂNG NHẬP</button></a>
+            <a href=""><button class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4 ">ĐĂNG NHẬP</button></a>
             <form action="" method="post">
                 <div class="mt-5">
                     <label for=""><span class="font-sans">Địa chỉ email</span></label>
@@ -55,7 +55,7 @@
                 <!-- dow 2  -->
                 <div class="flex items-center space-x-2 mt-5 mb-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6 text-purple-900">
+                        stroke="currentColor" class="w-6 h-6 text-purple-800">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
                     </svg>
@@ -100,7 +100,7 @@
                     <div class="flex items-start justify-start">
                     <span class="mr-2 text-xs">131adasds33vnd</span>
                     <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-800">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </a>
@@ -122,7 +122,7 @@
                     <p>Tổng thanh toán</p>
                     <p>123123 d</p>
                 </div>
-                <a href=""><button class="bg-purple-900 text-white py-1 px-8 rounded-3xl my-4">ĐẶT HÀNG</button></a>
+                <a href=""><button class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4">ĐẶT HÀNG</button></a>
             </div>
         </div>
 
