@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 include '../../model/connect.php';
 $product_query = "SELECT * FROM products";
@@ -33,6 +34,9 @@ if (isset($_GET['act'])) {
             break;
         case 'admin':
             include './admin';
+            break;
+        case 'logined':
+            include './content.php';
             break;
         default:
             include './content.php';

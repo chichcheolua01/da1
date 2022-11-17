@@ -13,9 +13,8 @@
     </div>
     <div class="grid mx-auto text-center grid-cols-4 gap-4 ">
       <?php foreach ($products as $key => $item) : ?>
-
         <div class="group">
-          <a href="./index.php?act=product_info&id=<?php echo $item["productId"] ?>">
+          <a href="./index.php?act=product_info&productId=<?php echo $item["productId"]?>&userId=<?php echo $_SESSION['userId']?>">
             <img src="../../image/<?php echo $item["productImage"] ?>" class="mb-10 group-hover:scale-105 duration-500" alt="">
             <div class="overflow-hidden relative flex flex-col justify-between">
               <div>

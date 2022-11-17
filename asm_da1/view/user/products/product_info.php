@@ -1,5 +1,5 @@
 <?php
-$id = $_GET['id'];
+$id = $_GET['productId'];
 $one_item_query = "SELECT * FROM products WHERE productId = $id";
 $item = getOne($one_item_query);
 $categoryId = $item['categoryId'];
@@ -86,8 +86,11 @@ $item_category = getOne($one_category_query);
 
                 </div>
             </div>
+            <form action="../../controller/add_to_cart.php?" method="POST">
             <div class="mt-10 flex flex-col space-y-3">
-                <a href="../../controller/add_to_cart.php"><button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"> MUA NGAY </button></a>
+                <input type="text" class="invisible" name="productId" value="<?php echo $_GET['productId']?>">
+                <input type="text" class="invisible" name="userId" value="<?php echo $_GET['userId']?>">
+                <button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3" type="submit"> MUA NGAY </button>
                 <div class="flex justify-between">
                     <div class="basis-[48%]">
                         <button class="w-full rounded-full border border-purple-800 text-purple-800 font-light text-xl py-3"> MUA TRẢ GÓP 0% </button>
@@ -96,7 +99,9 @@ $item_category = getOne($one_category_query);
                         <button class="w-full rounded-full border border-purple-800 text-purple-800 font-light text-xl py-3"> THÊM VÀO GIỎ HÀNG </button>
                     </div>
                 </div>
+               
             </div>
+            </form>
             <div class="flex flex-col space-y-10 mt-10 ">
                 <div class="flex space-x-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-700">

@@ -15,9 +15,9 @@ if (isset($_POST['submit'])) {
                 $error = "Mật khẩu không chính xác";
             } else {
                 $_SESSION['userName'] = $login_user['userName'];
+                $_SESSION['userId'] = $login_user['userId'];
                 $_SESSION['userAccess'] = $login_user['userAccess'];
-                // header("http://localhost/da1/asm_da1/view/user/index.php?act=");
-                echo "Đăng nhập thành công";
+                header("Location: ./index.php?act=logined&userId=".$_SESSION['userId']);
             }
         }
     }
