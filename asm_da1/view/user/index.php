@@ -25,6 +25,12 @@ if (isset($_GET['act'])) {
         case 'product_list':
             include './products/product_list.php';
             break;
+        case 'signin':
+            include './signin.php';
+            break;
+        case 'signup':
+            include './signup.php';
+            break;
         case 'admin':
             include './admin';
             break;
