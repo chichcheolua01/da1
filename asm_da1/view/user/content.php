@@ -1,5 +1,19 @@
 <body class="">
   <!-- Product Hot -->
+  <?php 
+  // $receiptId = $_GET['receiptId'];
+  // $cart_query = "SELECT productId FROM receipts_info FULL OUTER JOIN products ON receipts.productId = products.productId WHERE receiptId = $receiptId";
+  // $cart = getAll($cart_query);
+  // var_dump ($cart);
+  // $cart_product_query = "SELECT * FROM products WHERE productId = '$cart'";
+  // $cart_products = getAll($cart_product_query);
+  // var_dump($cart_products);
+  // $receiptId = $_GET['receiptId'];
+  // $cart_query = "SELECT productId FROM receipts_info WHERE receiptId = $receiptId";
+  // $cart = getAll($cart_query);
+  // $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
+  // $cart_products = getAll($cart_product_query);
+  ?>
   <div class="mx-auto max-w-screen-xl">
     <div class="flex justify-around items-center mb-7 mt-4">
       <h2 class="text-xl tracking-widest text-gray-800 pb-2 underline underline-offset-8 decoration-2 decoration-purple-800 grow">

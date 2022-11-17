@@ -83,7 +83,6 @@ $item_category = getOne($one_category_query);
                         </svg>
                         <p class="text-xl font-light">[Black Friday] Ưu đãi 8% cho các sản phẩm nguyên giá</p>
                     </div>
-
                 </div>
             </div>
             <form action="../../controller/add_to_cart.php?" method="POST">
