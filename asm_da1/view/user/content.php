@@ -13,6 +13,11 @@
   // $cart = getAll($cart_query);
   // $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
   // $cart_products = getAll($cart_product_query);
+  $userName = "";
+  if(isset($_SESSION['userName']))
+  {
+    $userName = $_SESSION['userName'];
+  }
   ?>
   <div class="mx-auto max-w-screen-xl">
     <div class="flex justify-around items-center mb-7 mt-4">
@@ -28,7 +33,7 @@
     <div class="grid mx-auto text-center grid-cols-4 gap-4 ">
       <?php foreach ($products as $key => $item) : ?>
         <div class="group">
-          <a href="./index.php?act=product_info&productId=<?php echo $item["productId"]?>&userId=<?php echo $_SESSION['userId']?>">
+          <a href="./index.php?act=product_info&productId=<?php echo $item["productId"]?>&userId=<?php echo $userName;?>">
             <img src="../../image/<?php echo $item["productImage"] ?>" class="mb-10 group-hover:scale-105 duration-500" alt="">
             <div class="overflow-hidden relative flex flex-col justify-between">
               <div>
