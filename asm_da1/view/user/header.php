@@ -68,7 +68,7 @@
                 <div class="flex space-x-20">
                     <div class="relative">
                     <div class="flex items-center border border-purple-800 p-2 rounded-full">
-                        <input type="text" name="search" class="outline-0 px-[10px] search" id="search" placeholder="Tìm cc gì v?">
+                        <input type="text" name="search" class="outline-0 px-[10px] search" id="search" placeholder="Tìm kiếm">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-purple-800 font-bold ">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -106,38 +106,38 @@
                                 <div class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2">
                                         <a href=""><li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU BÁN CHẠY</li>
-                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
-                                        <a href="./index.php?act=product_list&listId=frederique"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
+                                        <a href="./index.php?act=product_list&listId=1"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
+                                        <a href="./index.php?act=product_list&listId=3"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
                                             CONSTANT</li></a>
-                                        <a href="./index.php?act=product_list&listId=certina"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
+                                        <a href="./index.php?act=product_list&listId=4"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
                                         </li></a>
                                         <a href="./index.php?act=product_list&listId=parker"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER</li></a>
                                     </ul>
                                     <ul class="p-2">
                                         <a href=""><li class="block font-semibold text-xl mb-5">ĐỒNG HỒ CAO CẤP</li></a>
-                                        <a href="./index.php?act=product_list&listId=frederique"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
+                                        <a href="./index.php?act=product_list&listId=3"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
                                             CONSTANT</li></a>
-                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
+                                        <a href="./index.php?act=product_list&listId=1"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
                                         <a href="./index.php?act=product_list&listId=parker"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER</li></a>
                                         <a href="./index.php?act=product_list&listId=certina"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
                                         </li></a>
                                     </ul>
                                     <ul class="p-2">
                                         <a href=""><li class="block font-semibold text-xl mb-5">ĐỒNG HỒ THỤY SĨ</li></a>
-                                        <a href="./index.php?act=product_list&listId=longines"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
+                                        <a href="./index.php?act=product_list&listId=7"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
                                         </li></a>
-                                        <a href="./index.php?act=product_list&listId=rado"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">RADO</li></a>
-                                        <a href="./index.php?act=product_list&listId=tissot"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li></a>
-                                        <a href="./index.php?act=product_list&listId=ernest"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ERNEST
+                                        <a href="./index.php?act=product_list&listId=8"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">RADO</li></a>
+                                        <a href="./index.php?act=product_list&listId=9"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li></a>
+                                        <a href="./index.php?act=product_list&listId=10"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ERNEST
                                             BOREL</li></a>
                                     </ul>
                                     <ul class="p-2">
                                         <a href=""><li class="block font-semibold text-xl mb-5">ĐỒNG HỒ NHẬT BẢN</li></a>
-                                        <a href="./index.php?act=product_list&listId=orient_star"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT STAR
+                                        <a href="./index.php?act=product_list&listId=1_star"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT STAR
                                         </li></a>
-                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
-                                        <a href="./index.php?act=product_list&listId=seiko"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO</li></a>
-                                        <a href="./index.php?act=product_list&listId=citizen"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CITIZEN
+                                        <a href="./index.php?act=product_list&listId=1"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
+                                        <a href="./index.php?act=product_list&listId=2"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO</li></a>
+                                        <a href="./index.php?act=product_list&listId=5"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CITIZEN
                                         </li></a>
                                     </ul>
 
@@ -168,14 +168,14 @@
                                     </ul>
                                     <ul class="p-2">
                                         <a href=""><li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU HOT</li></a>
-                                        <a href="./index.php?act=product_list&listId=frederique"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
+                                        <a href="./index.php?act=product_list&listId=3"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
                                             CONSTANT</li></a>
-                                        <a href="./index.php?act=product_list&listId=longines"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
+                                        <a href="./index.php?act=product_list&listId=7"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
                                         </li></a>
-                                        <a href="./index.php?act=product_list&listId=tissot"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li></a>
+                                        <a href="./index.php?act=product_list&listId=9"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li></a>
                                         <a href="./index.php?act=product_list&listId=candino"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CANDINO
                                         </li></a>
-                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
+                                        <a href="./index.php?act=product_list&listId=1"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
                                     </ul>
                                     <ul class="p-2">
                                         <a href=""><li class="block font-semibold text-xl mb-5">GIỚI TÍNH ĐỒNG HỒ</li></a>
@@ -194,7 +194,7 @@
                                             CONSTANT HIGHLIFE</li></a>
                                         <a href="./index.php?act=product_list&listId=manu"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">MANUFACTURE
                                         </li></a>
-                                        <a href="./index.php?act=product_list&listId=seiko_5"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO 5
+                                        <a href="./index.php?act=product_list&listId=2_5"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO 5
                                             SPORTS</li></a>
                                     </ul>
 

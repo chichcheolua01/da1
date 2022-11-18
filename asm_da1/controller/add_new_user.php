@@ -39,6 +39,8 @@ if (isset($_POST['btn-signup'])) {
         connect($query);
         move_uploaded_file($_FILES["userImage"]["tmp_name"], "../../image/" . $_FILES["userImage"]["name"]);
         echo "Đăng ký thành công";
+        header("Location: ../view/user/index.php?act=");
     }
 }
+
 ?>
