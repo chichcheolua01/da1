@@ -89,40 +89,40 @@
                                 <div
                                     class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU BÁN CHẠY</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PREDERIQUE
-                                            CONSTANT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU BÁN CHẠY</li>
+                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
+                                        <a href="./index.php?act=product_list&listId=frederique"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
+                                            CONSTANT</li></a>
+                                        <a href="./index.php?act=product_list&listId=certina"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=parker"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER</li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">ĐỒNG HỒ CAO CẤP</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PREDERIQUE
-                                            CONSTANT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
-                                        </li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">ĐỒNG HỒ CAO CẤP</li></a>
+                                        <a href="./index.php?act=product_list&listId=frederique"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
+                                            CONSTANT</li></a>
+                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
+                                        <a href="./index.php?act=product_list&listId=parker"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER</li></a>
+                                        <a href="./index.php?act=product_list&listId=certina"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
+                                        </li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">ĐỒNG HỒ THỤY SĨ</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">RADO</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ERNEST
-                                            BOREL</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">ĐỒNG HỒ THỤY SĨ</li></a>
+                                        <a href="./index.php?act=product_list&listId=longines"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=rado"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">RADO</li></a>
+                                        <a href="./index.php?act=product_list&listId=tissot"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li></a>
+                                        <a href="./index.php?act=product_list&listId=ernest"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ERNEST
+                                            BOREL</li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">ĐỒNG HỒ NHẬT BẢN</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT STAR
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CITIZEN
-                                        </li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">ĐỒNG HỒ NHẬT BẢN</li></a>
+                                        <a href="./index.php?act=product_list&listId=orient_star"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT STAR
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
+                                        <a href="./index.php?act=product_list&listId=seiko"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO</li></a>
+                                        <a href="./index.php?act=product_list&listId=citizen"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CITIZEN
+                                        </li></a>
                                     </ul>
 
                                 </div>
@@ -139,48 +139,48 @@
                                 <div
                                     class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">DƯỚI 2
-                                            TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 2 TRIỆU
-                                            - 5 TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 5 TRIỆU
-                                            - 10 TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 10 TRIỆU
-                                            - 20 TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 20 TRIỆU
-                                            - 50 TRIỆU</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li></a>
+                                        <a href="./index.php?act=product_list&listId=under2"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">DƯỚI 2
+                                            TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId=2to5"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 2 TRIỆU
+                                            - 5 TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId=5to10"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 5 TRIỆU
+                                            - 10 TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId=10to20"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 10 TRIỆU
+                                            - 20 TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId=20to50"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 20 TRIỆU
+                                            - 50 TRIỆU</li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU HOT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
-                                            CONSTANT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CANDINO
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU HOT</li></a>
+                                        <a href="./index.php?act=product_list&listId=frederique"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
+                                            CONSTANT</li></a>
+                                        <a href="./index.php?act=product_list&listId=longines"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">LONGINES
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=tissot"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT</li></a>
+                                        <a href="./index.php?act=product_list&listId=candino"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CANDINO
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=orient"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT</li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">GIỚI TÍNH ĐỒNG HỒ</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ NAM
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ NỮ
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ ĐÔI
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ
-                                            UNISEX</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">GIỚI TÍNH ĐỒNG HỒ</li></a>
+                                        <a href="./index.php?act=product_list&listId=male"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ NAM
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=female"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ NỮ
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=couple"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ ĐÔI
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=unisex"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ
+                                            UNISEX</li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">BỘ SƯU TẬP NỔI BẬT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
-                                            CONSTANT HIGHLIFE</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">MANUFACTURE
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO 5
-                                            SPORTS</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">BỘ SƯU TẬP NỔI BẬT</li></a>
+                                        <a href="./index.php?act=product_list&listId=frederique_list"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">FREDERIQUE
+                                            CONSTANT HIGHLIFE</li></a>
+                                        <a href="./index.php?act=product_list&listId=manu"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">MANUFACTURE
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId=seiko_5"><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">SEIKO 5
+                                            SPORTS</li></a>
                                     </ul>
 
                                 </div>
@@ -197,46 +197,46 @@
                                 <div
                                     class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">DƯỚI 2
-                                            TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 2 TRIỆU
-                                            - 5 TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 5 TRIỆU
-                                            - 10 TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 10 TRIỆU
-                                            - 20 TRIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 20 TRIỆU
-                                            - 50 TRIỆU</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">DƯỚI 2
+                                            TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 2 TRIỆU
+                                            - 5 TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 5 TRIỆU
+                                            - 10 TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 10 TRIỆU
+                                            - 20 TRIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 20 TRIỆU
+                                            - 50 TRIỆU</li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">GARMIN</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">APPLE</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">GARMIN</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">APPLE</li></a>
 
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">TÍNH NĂNG</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">XEM GIỜ
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐO SỨC KHOẺ
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">GẮN SIM
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">GARMIN</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">MÀN HÌNH
-                                            AMOLED</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">TÍNH NĂNG</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">XEM GIỜ
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐO SỨC KHOẺ
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">GẮN SIM
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">GARMIN</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">MÀN HÌNH
+                                            AMOLED</li></a>
                                     </ul>
                                     <ul class="p-2 invisible">
-                                        <li class="block font-semibold text-xl mb-5">Main memu</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">Main memu</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
                                     </ul>
 
                                 </div>
@@ -253,50 +253,50 @@
                                 <div
                                     class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2 invisible">
-                                        <li class="block font-semibold text-xl mb-5">Main memu</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">Main memu</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
                                     </ul>
                                     <ul class="p-2 invisible">
-                                        <li class="block font-semibold text-xl mb-5">Main memu</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">Main memu</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
                                     </ul>
                                     <ul class="p-2 invisible">
-                                        <li class="block font-semibold text-xl mb-5">Main memu</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
-                                        </li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">Main memu</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">Sub menu
+                                        </li></a>
                                     </ul>
                                     <ul class="p-2">
-                                        <li class="block font-semibold text-xl mb-5">DANH MỤC TIN</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TIN TỨC NỔI
-                                            BẬT</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">KIẾN THỨC
-                                            ĐỒNG HỒ</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">BẢN TIN
-                                            THƯƠNG HIỆU</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CÔNG VIỆC
-                                            TẠI GALLE</li>
-                                        <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">VIDEO NỔI
-                                            BẬT</li>
+                                        <a href=""><li class="block font-semibold text-xl mb-5">DANH MỤC TIN</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TIN TỨC NỔI
+                                            BẬT</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">KIẾN THỨC
+                                            ĐỒNG HỒ</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">BẢN TIN
+                                            THƯƠNG HIỆU</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CÔNG VIỆC
+                                            TẠI GALLE</li></a>
+                                        <a href="./index.php?act=product_list&listId="><li class="block p-2 hover:bg-white hover:text-black cursor-pointer">VIDEO NỔI
+                                            BẬT</li></a>
                                     </ul>
 
                                 </div>
@@ -307,4 +307,4 @@
             </div>
             <hr class="border-b-1 border-gray-300">
 
-        </header>
+        </header></a>

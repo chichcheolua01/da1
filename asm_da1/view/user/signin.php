@@ -32,16 +32,16 @@ if (isset($_POST['submit'])) {
         Nếu bạn đã có tài khoản, hãy đăng nhập bằng tài khoản email hoặc số điện thoại.
     </div>
     <div class="w-1/3 mx-auto my-10 shadow-xl border">
-        <form class="w-full mx-10" action="" method="POST">
+        <form class="w-full px-[50px]" action="" method="POST">
             <div class="py-5">
                 <label for="">Tên đăng nhập</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userName" id="">
+                <input class="w-full border rounded-full h-[30px] px-5" type="text" name="userName" id="">
             </div>
             <div class="py-5">
                 <label for="">Mật khẩu</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="password" name="userPassword" id="">
+                <input class="w-full border rounded-full h-[30px] px-5" type="password" name="userPassword" id="">
             </div>
             <div class="text-red-500">
                 <?php
@@ -50,15 +50,17 @@ if (isset($_POST['submit'])) {
                 }
                 ?>
             </div>
-            <div class="py-5 mx-auto">
+            <div class="py-5 flex justify-center">
                 <button name="submit" class="bg-[#662d91] text-white w-[200px] py-2 rounded-full">ĐĂNG NHẬP</button>
-                <a class="ml-16 underline" href="">Bạn quên mật khẩu ?</a>
             </div>
+            <div class="flex justify-center">
+                <a class="underline" href="">Bạn quên mật khẩu ?</a>
+            </div>
+            
         </form>
         <br>
-        <hr class="w-1/2 mx-auto">
         <div class="text-center">
-            <h1 class="font-medium text-[#662d91]">BẠN CHƯA CÓ TÀI KHOẢN</h1>
+            <a class="" href="./index.php?act=signup"><h1 class="font-medium text-[#662d91] decoration-none">BẠN CHƯA CÓ TÀI KHOẢN?</h1></a>
             <div class="p-5">
                 <a class="underline" href="./index.php?act=signup">Tạo tài khoản</a> có nhiều lợi ích: thanh toán nhanh
                 hơn, giữ nhiều hơn một địa chỉ, theo dõi đơn đặt hàng và hơn thế nữa.
