@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="w-1/3 mx-auto my-10 shadow-xl">
-        <form action="../../controller/add-new-user.php" method="POST" name="signup-form" enctype="multipart/form-data" class="w-full mx-10">
+        <form action="../../controller/add_new_user.php" method="POST" name="signup-form" enctype="multipart/form-data" class="w-full mx-10">
             <div class="py-5">
                 <label for="">Họ và tên</label>
                 <br>

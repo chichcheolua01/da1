@@ -66,8 +66,13 @@
                     <button class="bg-primary text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
                 </div>
             </div>
+            <?php
+            $listId = $_GET['listId'];
+            $list_query = "SELECT * FROM products WHERE categoryId = $listId";
+            $list_products = getAll($list_query);
+            ?>
             <div class="list_product grid mx-auto text-center grid-cols-4 gap-8 ">
-                <?php foreach ($products as $key => $item) : ?>
+                <?php foreach ($list_products as $key => $item) : ?>
                     <div class="group">
                         <a href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>">
                             <img src="../../image/<?php echo $item["productImage"] ?>" class="mb-10 group-hover:scale-105 duration-500" alt="">
