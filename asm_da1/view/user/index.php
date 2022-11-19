@@ -9,9 +9,9 @@ $categories = getAll($category_query);
 $user_query = "SELECT * FROM users";
 $users = getAll($user_query);
 include './header.php';
-
 //controllers
 if (isset($_GET['act'])) {
+
     $act = $_GET['act'];
     switch ($act) {
         case 'product_info':

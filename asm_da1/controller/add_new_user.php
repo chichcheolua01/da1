@@ -38,8 +38,7 @@ if (isset($_POST['btn-signup'])) {
         $query = "INSERT INTO users( `userName`, `userPassword`, `userEmail`, `userFullname`, `userAccess`, `userImage`) VALUES ('$userName','$userPassword','$userEmail','$userFullname','$userAccess','$userImage')";
         connect($query);
         move_uploaded_file($_FILES["userImage"]["tmp_name"], "../../image/" . $_FILES["userImage"]["name"]);
-        echo "Đăng ký thành công";
-        header("Location: ../view/user/index.php?act=");
+        header("Location: ../view/user/index.php?act=signin");
     }
 }
 
