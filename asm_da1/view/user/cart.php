@@ -12,16 +12,16 @@
             </button>
         </div>
         <?php
-        // $receiptId = $_GET['receiptId'];
-        // $cart_query = "SELECT productId FROM receipts_info WHERE receiptId = $receiptId";
-        // $cart = getAll($cart_query);
-        // $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
-        // $cart_products = getAll($cart_product_query);
+        $receiptId = $_GET['receiptId'];
+        $cart_query = "SELECT productId FROM receipts_info WHERE receiptId = $receiptId";
+        $cart = getAll($cart_query);
+        $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
+        $cart_products = getAll($cart_product_query);
         ?>
         <div class="w-[500px] mx-auto grid place-items-end">
             <div class="min-h-[695px]">
                 <a href="#">
-                    <?php //foreach ($cart_products as $key => $value): ?>
+                    <?php foreach ($cart_products as $key => $value): ?>
                     <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
                         <div class="col-span-2">
                             <h1 class="font-semibold"><?php echo $value['productName']?></h1>
@@ -41,7 +41,7 @@
                                     </button>
                                 </div>
                             </div> -->
-                            <div class=""> <?php //echo $value['productPrice']?> </div>
+                            <!-- <div class=""> <?php echo $value['productPrice']?> </div> -->
                         </div>
                         <div class="">
                             <button>
@@ -51,7 +51,7 @@
                             </button>
                         </div>
                     </div>
-                    <?php //endforeach ?>
+                    <?php endforeach ?>
                 </a>
             </div>
             <div class="bg-gray-100 w-full">
