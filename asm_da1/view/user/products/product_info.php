@@ -1,5 +1,6 @@
 <?php
 $id = $_GET['productId'];
+$userId = $_GET['userId'];
 $one_item_query = "SELECT * FROM products WHERE productId = $id";
 $item = getOne($one_item_query);
 $categoryId = $item['categoryId'];
@@ -106,12 +107,12 @@ $item_category = getOne($one_category_query);
             </div>
             <form action="../../controller/add_to_cart.php?" method="POST">
                 <div class="mt-10 flex flex-col space-y-3">
-                <input type="text" class="invisible" name="productId" value="<?php echo $_GET['productId'] ?>">
                 <input type="text" class="hidden" name="productId" value="<?php echo $id?>">
                 <input type="text" class="hidden" name="userId" value="<?php echo $userId?>">
                 <input type="text" class="hidden" name="productName" value="<?php echo $item["productName"] ?>">
                 <input type="text" class="hidden" name="productPrice" value="<?php echo $item["productPrice"] ?>">
                 <input type="text" class="hidden" name="categoryImage" value="<?php echo $item_category["categoryImage"] ?>">
+                <input type="text" class="hidden" name="productImage" value="<?php echo $item["productImage"] ?>">
                     <button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"
                         type="submit"> MUA NGAY </button>
                     <div class="flex justify-between">
@@ -126,7 +127,6 @@ $item_category = getOne($one_category_query);
                                 THÊM VÀO GIỎ HÀNG </button>
                         </div>
                     </div>
-
                 </div>
             </form>
             <div class="flex flex-col space-y-10 mt-10 ">

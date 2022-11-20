@@ -14,8 +14,13 @@
     // $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
     // $cart_products = getAll($cart_product_query);
     $userName = "";
-    if (isset($_SESSION['userName'])) {
+    $userId = "";
+    if (isset($_SESSION['userName'])) 
+    {
       $userName = $_SESSION['userName'];
+    }
+    if(isset($_SESSION['userId']))
+    {
       $userId = $_SESSION['userId'];
     }
     ?>
@@ -35,7 +40,7 @@
             <?php foreach ($products as $key => $item): ?>
             <div class="group">
                 <a
-                    href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>&userId=<?php echo $userName; ?>">
+                    href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>&userId=<?php echo $userId; ?>">
                     <img src="../../image/<?php echo $item["productImage"] ?>"
                         class="mb-10 group-hover:scale-105 duration-500" alt="">
                     <div class="overflow-hidden relative flex flex-col justify-between">
