@@ -35,6 +35,9 @@ if (isset($_GET['act'])) {
         case 'admin':
             include './admin';
             break;
+        case 'add':
+            include './add.php';
+            break;
         case 'logined':
             include './content.php';
             break;
