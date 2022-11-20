@@ -150,7 +150,7 @@
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER
                                             </li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=certina">
+                                        <a href="./index.php?act=product_list&listId=4">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
                                             </li>
                                         </a>
@@ -217,26 +217,26 @@
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=under2">
+                                        <a href="./index.php?act=product_list&listPrice=under2">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">DƯỚI 2
                                                 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=2to5">
+                                        <a href="./index.php?act=product_list&listPrice=2to5">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 2
                                                 TRIỆU
                                                 - 5 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=5to10">
+                                        <a href="./index.php?act=product_list&listPrice=5to10">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 5
                                                 TRIỆU
                                                 - 10 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=10to20">
+                                        <a href="./index.php?act=product_list&listPrice=10to20">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 10
                                                 TRIỆU
                                                 - 20 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=20to50">
+                                        <a href="./index.php?act=product_list&listPrice=20to50">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 20
                                                 TRIỆU
                                                 - 50 TRIỆU</li>
@@ -273,22 +273,22 @@
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">GIỚI TÍNH ĐỒNG HỒ</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=male">
+                                        <a href="./index.php?act=product_list&listGender=1">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ
                                                 NAM
                                             </li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=female">
+                                        <a href="./index.php?act=product_list&listGender=2">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ
                                                 NỮ
                                             </li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=couple">
+                                        <a href="./index.php?act=product_list&listGender=3">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ
                                                 ĐÔI
                                             </li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=unisex">
+                                        <a href="./index.php?act=product_list&listGender=4">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ĐỒNG HỒ
                                                 UNISEX</li>
                                         </a>
@@ -330,26 +330,26 @@
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=">
+                                        <a href="./index.php?act=product_list&listPrice=under2">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">DƯỚI 2
                                                 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=">
+                                        <a href="./index.php?act=product_list&listPrice=2to5">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 2
                                                 TRIỆU
                                                 - 5 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=">
+                                        <a href="./index.php?act=product_list&listPrice=5to10">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 5
                                                 TRIỆU
                                                 - 10 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=">
+                                        <a href="./index.php?act=product_list&listPrice=10to20">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 10
                                                 TRIỆU
                                                 - 20 TRIỆU</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&listId=">
+                                        <a href="./index.php?act=product_list&listPrice=20to50">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TỪ 20
                                                 TRIỆU
                                                 - 50 TRIỆU</li>
