@@ -11,21 +11,15 @@
                 </svg>
             </button>
         </div>
-        <?php
-        $receiptId = $_GET['receiptId'];
-        $cart_query = "SELECT productId FROM receipts_info WHERE receiptId = $receiptId";
-        $cart = getAll($cart_query);
-        $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
-        $cart_products = getAll($cart_product_query);
-        ?>
         <div class="w-[500px] mx-auto grid place-items-end">
             <div class="min-h-[695px]">
                 <a href="#">
-                    <?php foreach ($cart_products as $key => $value): ?>
-                    <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
+                    <?php foreach ($_SESSION['mycart'] as $cart) {
+                        echo '
+                        <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
                         <div class="col-span-2">
-                            <h1 class="font-semibold"><?php echo $value['productName']?></h1>
-                            <!-- <div class="my-5 flex">
+                            <h1 class="font-semibold">'.$cart[2].'</h1>
+                            <div class="my-5 flex">
                                 Số lượng:
                                 <div class="grid grid-cols-3 rounded-full border w-1/2 justify-items-center mx-5">
                                     <button>
@@ -40,8 +34,8 @@
                                         </svg>
                                     </button>
                                 </div>
-                            </div> -->
-                            <!-- <div class=""> <?php echo $value['productPrice']?> </div> -->
+                            </div> 
+                            <div class=""> '.$cart[3].'</div>
                         </div>
                         <div class="">
                             <button>
@@ -51,7 +45,9 @@
                             </button>
                         </div>
                     </div>
-                    <?php endforeach ?>
+                        ';
+                    }
+                    ?>
                 </a>
             </div>
             <div class="bg-gray-100 w-full">
@@ -69,4 +65,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
