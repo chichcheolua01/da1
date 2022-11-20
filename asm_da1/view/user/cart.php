@@ -14,7 +14,9 @@
         <div class="w-[500px] mx-auto grid place-items-end">
             <div class="min-h-[695px]">
                 <a href="#">
-                    <?php foreach ($_SESSION['mycart'] as $cart) {
+                    <?php
+                    if(isset( $_SESSION['mycart'] )){                    
+                        foreach ($_SESSION['mycart'] as $cart) {
                         echo '
                         <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
                         <div class="col-span-2">
@@ -46,7 +48,10 @@
                         </div>
                     </div>
                         ';
+                    }} else{
+                        echo "Không có sản phẩm nào";
                     }
+
                     ?>
                 </a>
             </div>
