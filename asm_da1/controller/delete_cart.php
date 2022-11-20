@@ -1,5 +1,5 @@
 <?php
     session_start();
-    var_dump ($_SESSION['mycart']);
+    session_destroy();
     //header("Location: ../view/user/index.php?act=");
 ?>
