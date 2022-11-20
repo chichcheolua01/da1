@@ -26,12 +26,15 @@ if (!function_exists('currency_format')) {
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="grid grid-cols-7">
-        <div class="">
-            <?php 
-                include './side_menu.php';
-            ?>
+    <div class="grid grid-cols-7 relative">
+        <div>
+            <div class="fixed">
+                <?php 
+                    include './side_menu.php';
+                ?>
+            </div>
         </div>
+        
         <div class="col-span-6">
             <?php
                 if (isset($_GET['act'])) {
