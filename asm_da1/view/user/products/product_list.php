@@ -68,46 +68,37 @@
             </div>
             <?php
             $listId = "";
-            if(isset($_GET['listId']))
-            {
+            if (isset($_GET['listId'])) {
                 $listId = $_GET['listId'];
                 $list_query = "SELECT * FROM products WHERE categoryId = $listId";
                 $list_products = getAll($list_query);
             }
             $listGender = "";
-            if(isset($_GET['listGender']))
-            {
+            if (isset($_GET['listGender'])) {
                 $listGender = $_GET['listGender'];
                 $list_gender_query = "SELECT * FROM products WHERE productGenderId = $listGender";
                 $list_products = getAll($list_gender_query);
             }
-            if(isset($_GET['listPrice']))
-            {
+            if (isset($_GET['listPrice'])) {
                 $listPrice = $_GET['listPrice'];
-                switch($listPrice)
-                {
-                    case 'under2':
-                        {
+                switch ($listPrice) {
+                    case 'under2': {
                             $list_price_query = "SELECT * FROM products WHERE productPrice <= 2000000";
                             break;
                         }
-                    case '2to5':
-                        {
+                    case '2to5': {
                             $list_price_query = "SELECT * FROM products WHERE productPrice > 2000000 AND productPrice <= 5000000";
                             break;
                         }
-                    case '5to10':
-                        {
+                    case '5to10': {
                             $list_price_query = "SELECT * FROM products WHERE productPrice > 5000000 AND productPrice <= 10000000";
                             break;
                         }
-                    case '10to20':
-                        {
+                    case '10to20': {
                             $list_price_query = "SELECT * FROM products WHERE productPrice > 10000000 AND productPrice <= 20000000";
                             break;
                         }
-                    case '20to50':
-                        {
+                    case '20to50': {
                             $list_price_query = "SELECT * FROM products WHERE productPrice > 20000000 AND productPrice <= 50000000";
                             break;
                         }
@@ -128,20 +119,18 @@
                                     <div>
                                         <p class="font-thin text-sm line-through my-1">
                                         <div class="flex justify-center">
-                                            <p class="text-xl line-through"> <?php echo substr($item["productPrice"], 0, -6)   ?>
-                                            <p class="text-xl line-through">.<?php echo substr($item["productPrice"], -6, 3)   ?>
-                                            <p class="text-xl line-through">.<?php echo substr($item["productPrice"], -3, 3)   ?>
-                                            <p class="underline">đ</p>
+                                            <p class="text-xl line-through">
+                                                <?php echo currency_format($item["productPrice"]) ?>
+                                            </p>
                                         </div>
                                         </p>
                                     </div>
                                     <div class="flex pb-10 text-xl items-end">
                                         <div class="flex">
                                             <p class="text-xl font-bold text-purple-800 mr-2 flex items-end"> Giá KM </p>
-                                            <p class="text-2xl font-bold text-purple-800"> <?php echo substr($item["productPrice"], 0, -6)   ?>
-                                            <p class="text-2xl font-bold text-purple-800">.<?php echo substr($item["productPrice"], -6, 3)   ?>
-                                            <p class="text-2xl font-bold text-purple-800">.<?php echo substr($item["productPrice"], -3, 3)   ?>
-                                            <p class="underline font-bold text-purple-800">đ</p>
+                                            <p class="text-2xl font-bold text-purple-800">
+                                                <?php echo currency_format($item["productPrice"]) ?>
+                                            </p>
                                         </div>
                                     </div>
                                     <a href="" class="bg-purple-800 text-white mt-2 p-2 px-3 w-52 left-12 rounded-3xl transform group-hover:bottom-0 group-hover:left-12 duration-500 absolute -bottom-16">THÊM

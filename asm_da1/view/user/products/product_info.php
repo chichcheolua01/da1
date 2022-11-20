@@ -60,22 +60,15 @@ $item_category = getOne($one_category_query);
                 <p class="text-red-800 font-bold">Giá KM </p>
                 <div class="flex">
                     <p class="text-2xl text-red-800 font-bold">
-                        <?php echo substr($item["productPrice"], 0, -6) ?>
-                    <p class="text-2xl text-red-800 font-bold">.
-                        <?php echo substr($item["productPrice"], -6, 3) ?>
-                    <p class="text-2xl text-red-800 font-bold">.
-                        <?php echo substr($item["productPrice"], -3, 3) ?>
+                        <?php echo currency_format($item["productPrice"]) ?>
+                    </p>
                 </div>
                 <p class="underline text-red-800 font-bold">đ</p>
                 <p class="font-bold text-sm line-through my-1">
                 <div class="flex justify-center">
                     <p class="text-xl line-through">
-                        <?php echo substr($item["productPrice"], 0, -6) ?>
-                    <p class="text-xl line-through">.
-                        <?php echo substr($item["productPrice"], -6, 3) ?>
-                    <p class="text-xl line-through">.
-                        <?php echo substr($item["productPrice"], -3, 3) ?>
-                    <p class="underline">đ</p>
+                        <?php echo currency_format($item["productPrice"]) ?>
+                    </p>
                 </div>
                 </p>
             </div>

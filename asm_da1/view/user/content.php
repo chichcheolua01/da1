@@ -54,12 +54,8 @@
                                 <p class="font-thin text-sm line-through my-1">
                                 <div class="flex justify-center">
                                     <p class="text-xl line-through">
-                                        <?php echo substr($item["productPrice"], 0, -6) ?>
-                                    <p class="text-xl line-through">.
-                                        <?php echo substr($item["productPrice"], -6, 3) ?>
-                                    <p class="text-xl line-through">.
-                                        <?php echo substr($item["productPrice"], -3, 3) ?>
-                                    <p class="underline">đ</p>
+                                        <?php echo currency_format($item["productPrice"]) ?>
+                                    </p>
                                 </div>
                                 </p>
                             </div>
@@ -67,12 +63,8 @@
                                 <div class="flex">
                                     <p class="text-xl font-bold text-purple-800 mr-2 flex items-end"> Giá KM </p>
                                     <p class="text-2xl font-bold text-purple-800">
-                                        <?php echo substr($item["productPrice"], 0, -6) ?>
-                                    <p class="text-2xl font-bold text-purple-800">.
-                                        <?php echo substr($item["productPrice"], -6, 3) ?>
-                                    <p class="text-2xl font-bold text-purple-800">.
-                                        <?php echo substr($item["productPrice"], -3, 3) ?>
-                                    <p class="underline font-bold text-purple-800">đ</p>
+                                      <?php echo currency_format($item["productPrice"]) ?>
+                                    </p>
                                 </div>
                             </div>
                             <a href=""
