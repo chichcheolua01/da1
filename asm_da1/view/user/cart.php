@@ -46,7 +46,7 @@
                                         </button>
                                     </div>
                                 </div> 
-                                <div class=""> ' . $cart[3] . '</div>
+                                <div class=""> ' . currency_format($cart[3]) . '</div>
                             </div>
                             <div class="">
                                 <a href="../../controller/delete_cart.php?productId='.$cart[0].'">
@@ -73,7 +73,7 @@
                         <?php foreach ($mycart as $cart) : ?>
                             <?php $total += $cart[3] ?>
                         <?php endforeach ?>
-                        <p><?php echo $total ?></p>
+                        <p><?php echo currency_format($total) ?></p>
                     </div>
                 </div>
                 <div class="px-10 py-5">

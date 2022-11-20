@@ -1,11 +1,17 @@
 <?php
 $id = $_GET['productId'];
-$userId = $_GET['userId'];
+if(isset($_GET['userId'])){
+    $userId = $_GET['userId'];
+}
+
 $one_item_query = "SELECT * FROM products WHERE productId = $id";
 $item = getOne($one_item_query);
+$add_view_query = "UPDATE products SET productView = productView + 1 WHERE productId = $id";
+connect($add_view_query);
 $categoryId = $item['categoryId'];
 $one_category_query = "SELECT * FROM categories WHERE categoryId = $categoryId";
 $item_category = getOne($one_category_query);
+
 ?>
 <div class="p-10">
     <div class="flex space-x-10 items-center mb-10">
