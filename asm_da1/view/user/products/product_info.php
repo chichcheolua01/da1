@@ -85,7 +85,7 @@ $item_category = getOne($one_category_query);
                     </div>
                 </div>
             </div>
-            <form action="../../controller/add_to_cart.php?" method="POST">
+            <form action="../../controller/add_to_cart.php" method="POST">
             <div class="mt-10 flex flex-col space-y-3">
                 <input type="text" class="invisible" name="productId" value="<?php echo $_GET['productId']?>">
                 <input type="text" class="invisible" name="userId" value="<?php echo $_GET['userId']?>">

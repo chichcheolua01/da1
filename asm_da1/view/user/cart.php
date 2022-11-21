@@ -24,7 +24,7 @@
                     <?php //foreach ($cart_products as $key => $value): ?>
                     <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
                         <div class="col-span-2">
-                            <h1 class="font-semibold"><?php echo $value['productName']?></h1>
+                            <h1 class="font-semibold"><?php //echo $value['productName']?></h1>
                             <!-- <div class="my-5 flex">
                                 Số lượng:
                                 <div class="grid grid-cols-3 rounded-full border w-1/2 justify-items-center mx-5">
