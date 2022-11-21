@@ -14,3 +14,4 @@
     array_push($_SESSION['mycart'], $arr_cart); 
     header("location:../view/user/index.php?act=logined&userId=$userId");
     include '../view/user/cart.php';
+?>
