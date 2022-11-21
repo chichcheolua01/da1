@@ -24,7 +24,7 @@
                     <?php echo '
                         <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
                             <div>
-                                <img src="../../image/' . $cart[5]
+                                <img src="../../image/' . $cart[4]
 
                         . '" alt="">
                             </div>

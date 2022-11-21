@@ -110,7 +110,6 @@ $item_category = getOne($one_category_query);
                 <input type="text" class="hidden" name="userId" value="<?php echo $userId?>">
                 <input type="text" class="hidden" name="productName" value="<?php echo $item["productName"] ?>">
                 <input type="text" class="hidden" name="productPrice" value="<?php echo $item["productPrice"] ?>">
-                <input type="text" class="hidden" name="categoryImage" value="<?php echo $item_category["categoryImage"] ?>">
                 <input type="text" class="hidden" name="productImage" value="<?php echo $item["productImage"] ?>">
                     <button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"
                         type="submit"> MUA NGAY </button>

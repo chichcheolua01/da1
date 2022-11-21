@@ -1,4 +1,8 @@
-
+<?php
+if(isset($_GET['userId'])){
+    $userId = $_GET['userId'];
+}
+?>
 <body class="border border-red-600">
     <!-- Product Hot -->
     <section class="content grid grid-cols-5">
@@ -108,7 +112,9 @@
             }
             ?>
             <div class="list_product grid mx-auto text-center grid-cols-4 gap-8 ">
-                <?php foreach ($list_products as $key => $item) : ?>
+                <?php
+                
+                foreach ($list_products as $key => $item) : ?>
                     <div class="group">
                         <a href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>">
                             <img src="../../image/<?php echo $item["productImage"] ?>" class="mb-10 group-hover:scale-105 duration-500" alt="">
@@ -136,14 +142,14 @@
                                     </div>
                                     <div>
                                         <form action="../../controller/add_to_cart.php?" method="POST">
-                                            <input type="text" class="hidden" name="productId" value="<?php echo $id ?>">
+                                            <input type="text" class="hidden" name="productId" value="<?php echo $item['productId']  ?>">
                                             <input type="text" class="hidden" name="userId" value="<?php echo $userId ?>">
                                             <input type="text" class="hidden" name="productName" value="<?php echo $item["productName"] ?>">
                                             <input type="text" class="hidden" name="productPrice" value="<?php echo $item["productPrice"] ?>">
-                                            <input type="text" class="hidden" name="categoryImage" value="<?php echo $item_category["categoryImage"] ?>">
                                             <input type="text" class="hidden" name="productImage" value="<?php echo $item["productImage"] ?>">
                                             <button type="submit" class="bg-purple-800 text-white mt-2 p-2 px-3 w-52 left-12 rounded-3xl transform group-hover:bottom-0 group-hover:left-12 duration-500 absolute -bottom-16"> THÊM
                                                 VÀO GIỎ HÀNG</button>
+                                            </form>
                                     </div>
                                 </div>
                             </div>

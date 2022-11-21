@@ -9,9 +9,7 @@
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <style>
         * {
             font-family: 'Roboto', sans-serif;
@@ -24,7 +22,7 @@
             if (fileInput.files && fileInput.files[0]) {
                 var reader = new FileReader();
 
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     $('#image').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(fileInput.files[0]);
@@ -33,10 +31,12 @@
     </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('.search').keyup(function () {
+        $(document).ready(function() {
+            $('.search').keyup(function() {
                 var txt = $('.search').val();
-                $.post('../../controller/search.php', { data: txt }, function (data) {
+                $.post('../../controller/search.php', {
+                    data: txt
+                }, function(data) {
                     $('.result_search').html(data);
                 })
             })
@@ -45,7 +45,14 @@
 
 
 
+
 </head>
+<?php
+$userHeaderId = "";
+if (isset($_GET['userId'])) {
+    $userHeaderId = $_GET['userId'];
+}
+?>
 
 <body class="lg:px-[100px] ">
 
@@ -70,17 +77,13 @@
                 <div class="flex space-x-20">
                     <div class="relative">
                         <div class="flex items-center border border-purple-800 p-2 rounded-full">
-                            <input type="text" name="search" class="outline-0 px-[10px] search" id="search"
-                                placeholder="Tìm kiếm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-8 h-8 text-purple-800 font-bold ">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <input type="text" name="search" class="outline-0 px-[10px] search" id="search" placeholder="Tìm kiếm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-purple-800 font-bold ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                             </svg>
                         </div>
                         <!--  -->
-                        <div
-                            class="result_search z-50 bg-white  absolute -bottom-64 shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
+                        <div class="result_search z-50 bg-white  absolute -bottom-64 shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
                         </div>
                         <!--  -->
                     </div>
@@ -109,12 +112,11 @@
                                         <p class="text-black font-bold">THƯƠNG HIỆU</p>
                                     </div>
                                 </a>
-                                <div
-                                    class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
+                                <div class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2">
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU BÁN CHẠY</li>
-                                            <a href="./index.php?act=product_list&listId=1">
+                                            <a href="./index.php?act=product_list&listId=1&userId=<?php echo $userHeaderId; ?>">
                                                 <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">
                                                     ORIENT</li>
                                             </a>
@@ -211,8 +213,7 @@
                                 </a>
 
 
-                                <div
-                                    class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
+                                <div class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2">
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li>
@@ -324,8 +325,7 @@
                                 </a>
 
 
-                                <div
-                                    class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
+                                <div class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2">
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">KHOẢNG GIÁ</li>
@@ -433,8 +433,7 @@
                                 </a>
 
 
-                                <div
-                                    class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
+                                <div class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white shadow-2xl mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
                                     <ul class="p-2 invisible">
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">Main memu</li>
