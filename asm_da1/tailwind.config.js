@@ -7,7 +7,7 @@ module.exports = {
         body: "'Roboto', sans-serif"
       },
       colors: {
-        primary: "#4a027f",
+        primary: "#6C5DD3",
       },
     },
   },

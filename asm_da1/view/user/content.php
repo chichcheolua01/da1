@@ -1,6 +1,6 @@
 <body class="">
   <!-- Product Hot -->
-  <?php 
+  <?php
   // $receiptId = $_GET['receiptId'];
   // $cart_query = "SELECT productId FROM receipts_info FULL OUTER JOIN products ON receipts.productId = products.productId WHERE receiptId = $receiptId";
   // $cart = getAll($cart_query);
@@ -14,9 +14,12 @@
   // $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
   // $cart_products = getAll($cart_product_query);
   $userName = "";
-  if(isset($_SESSION['userName']))
-  {
+  $userId = "";
+  if (isset($_SESSION['userName'])) {
     $userName = $_SESSION['userName'];
+  }
+  if (isset($_SESSION['userId'])) {
+    $userId = $_SESSION['userId'];
   }
   ?>
   <div class="mx-auto max-w-screen-xl">
@@ -33,34 +36,44 @@
     <div class="grid mx-auto text-center grid-cols-4 gap-4 ">
       <?php foreach ($products as $key => $item) : ?>
         <div class="group">
-          <a href="./index.php?act=product_info&productId=<?php echo $item["productId"]?>&userId=<?php echo $userName;?>">
+          <a href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>&userId=<?php echo $userId; ?>">
             <img src="../../image/<?php echo $item["productImage"] ?>" class="mb-10 group-hover:scale-105 duration-500" alt="">
             <div class="overflow-hidden relative flex flex-col justify-between">
               <div>
-                <p class="font-semibold"><?php echo $item['productName'] ?></p>
+                <p class="font-semibold">
+                  <?php echo $item['productName'] ?>
+                </p>
               </div>
               <div class="flex flex-col items-center">
                 <div>
                   <p class="font-thin text-sm line-through my-1">
                   <div class="flex justify-center">
-                    <p class="text-xl line-through"> <?php echo substr($item["productPrice"], 0, -6)   ?>
-                    <p class="text-xl line-through">.<?php echo substr($item["productPrice"], -6, 3)   ?>
-                    <p class="text-xl line-through">.<?php echo substr($item["productPrice"], -3, 3)   ?>
-                    <p class="underline">đ</p>
+                    <p class="text-xl line-through">
+                      <?php echo currency_format($item["productPrice"]) ?>
+                    </p>
                   </div>
                   </p>
                 </div>
                 <div class="flex pb-10 text-xl items-end">
                   <div class="flex">
                     <p class="text-xl font-bold text-purple-800 mr-2 flex items-end"> Giá KM </p>
-                    <p class="text-2xl font-bold text-purple-800"> <?php echo substr($item["productPrice"], 0, -6)   ?>
-                    <p class="text-2xl font-bold text-purple-800">.<?php echo substr($item["productPrice"], -6, 3)   ?>
-                    <p class="text-2xl font-bold text-purple-800">.<?php echo substr($item["productPrice"], -3, 3)   ?>
-                    <p class="underline font-bold text-purple-800">đ</p>
+                    <p class="text-2xl font-bold text-purple-800">
+                      <?php echo currency_format($item["productPrice"]) ?>
+                    </p>
                   </div>
                 </div>
-                <a href="" class="bg-purple-800 text-white mt-2 p-2 px-3 w-52 left-12 rounded-3xl transform group-hover:bottom-0 group-hover:left-12 duration-500 absolute -bottom-16">THÊM
-                  VÀO GIỎ HÀNG</a>
+                <div>
+                <form action="../../controller/add_to_cart.php?" method="POST">
+                <input type="text" class="hidden" name="productId" value="<?php echo $id?>">
+                <input type="text" class="hidden" name="userId" value="<?php echo $userId?>">
+                <input type="text" class="hidden" name="productName" value="<?php echo $item["productName"] ?>">
+                <input type="text" class="hidden" name="productPrice" value="<?php echo $item["productPrice"] ?>">
+                <input type="text" class="hidden" name="categoryImage" value="<?php echo $item_category["categoryImage"] ?>">
+                <input type="text" class="hidden" name="productImage" value="<?php echo $item["productImage"] ?>">
+                <button type="submit" class="bg-purple-800 text-white mt-2 p-2 px-3 w-52 left-12 rounded-3xl transform group-hover:bottom-0 group-hover:left-12 duration-500 absolute -bottom-16"> THÊM
+                      VÀO GIỎ HÀNG</button>
+                </div>
+                </form>
               </div>
             </div>
           </a>
@@ -82,7 +95,8 @@
   <!-- Why choose us -->
   <div class="bg-gray-100">
     <div class="text-center">
-      <h2 class="text-xl tracking-widest text-gray-800 pt-6 underline underline-offset-8 decoration-2 decoration-purple-800 grow my-8">VÌ SAO CHỌN CHÚNG TÔI</h2>
+      <h2 class="text-xl tracking-widest text-gray-800 pt-6 underline underline-offset-8 decoration-2 decoration-purple-800 grow my-8">
+        VÌ SAO CHỌN CHÚNG TÔI</h2>
     </div>
     <div class="grid grid-cols-4 container gap-6 mx-auto pb-6 font-bold text-xl tracking-wide">
       <div class="flex items-center justify-evenly">
@@ -96,7 +110,7 @@
       <div class="flex items-center">
         <img src="../../image/icon3.png" alt="">
         <span>THAY PIN MIỄN PHÍ<br>TRỌN ĐỜI</span>
-      </div>                                 
+      </div>
       <div class="flex items-center">
         <img src="../../image/icon4.png" alt="">
         <span>HỖ TRỢ TRẢ GÓP<br> TRẢ GÓP 0%</span>

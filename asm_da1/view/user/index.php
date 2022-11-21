@@ -8,10 +8,17 @@ $category_query = "SELECT * FROM categories";
 $categories = getAll($category_query);
 $user_query = "SELECT * FROM users";
 $users = getAll($user_query);
+if (!function_exists('currency_format')) {
+    function currency_format($number, $suffix = 'đ') {
+        if (!empty($number)) {
+            return number_format($number, 0, ',', '.') . "{$suffix}";
+        }
+    }
+}
 include './header.php';
-
 //controllers
 if (isset($_GET['act'])) {
+
     $act = $_GET['act'];
     switch ($act) {
         case 'product_info':
@@ -35,6 +42,9 @@ if (isset($_GET['act'])) {
         case 'admin':
             include './admin';
             break;
+        case 'add':
+            include './add.php';
+            break;
         case 'logined':
             include './content.php';
             break;
@@ -47,3 +57,4 @@ if (isset($_GET['act'])) {
 }
 include './cart.php';
 include './footer.php';
+?>
