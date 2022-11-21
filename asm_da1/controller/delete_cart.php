@@ -1,5 +1,11 @@
 <?php
     session_start();
-    session_destroy();
-    //header("Location: ../view/user/index.php?act=");
+    include '../model/connect.php';
+    $userId = $_GET['userId'];
+    if(isset($_GET['cartId'])){
+        array_splice($_SESSION['mycart'],$_GET['cartId'],1);
+    } else{
+        $_SESSION['mycart'] = [];
+    }
+    header("location:../view/user/index.php?act=logined&userId=$userId");
 ?>

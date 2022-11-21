@@ -50,7 +50,7 @@
 <?php
 $userHeaderId = "";
 if (isset($_GET['userId'])) {
-    $userHeaderId = $_GET['userId'];
+    $userId = $_GET['userId'];
 }
 ?>
 
@@ -116,7 +116,7 @@ if (isset($_GET['userId'])) {
                                     <ul class="p-2">
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU BÁN CHẠY</li>
-                                            <a href="./index.php?act=product_list&listId=1&userId=<?php echo $userHeaderId; ?>">
+                                            <a href="./index.php?act=product_list&listId=1&userId=<?php echo $userId; ?>">
                                                 <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">
                                                     ORIENT</li>
                                             </a>
