@@ -7,47 +7,47 @@
         <!-- Box right -->
         <div class="col-span-2 border shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5">
             <a href=""><button class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4 ">ĐĂNG NHẬP</button></a>
-            <form action="" method="post">
+            <form action=""  onsubmit="return validate()"  method="post">
                 <div class="mt-5">
-                    <label for=""><span class="font-sans">Địa chỉ email</span></label>
+                    <label for="email"><span class="font-sans">Địa chỉ email</span></label>
                     <div>
-                        <input type="text" class="border border-gray-300 px-10 py-1 rounded-2xl  my-2">
+                        <input type="text" class="email border border-gray-300 px-10 py-1 rounded-2xl  my-2">
                     </div>
                 </div>
                 <!-- 2 row -->
                 <div class="grid grid-cols-2 gap-y-4 border-b-2 pb-3">
                     <div>
-                        <label for=""><span class="font-sans">Tên</span></label> <br>
-                        <input type="text" class="border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                        <label for="username"><span class="font-sans">Tên</span></label> <br>
+                        <input type="text" class="username border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                     </div>
                     <div>
-                        <label for=""><span class="font-sans">Địa chỉ đường</span></label>
+                        <label for="address"><span class="font-sans">Địa chỉ đường</span></label>
                         <div>
-                            <input type="text" class="border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" class="address border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
-                        <label for=""><span class="font-sans">Số điện thoại</span></label>
+                        <label for="phoneNumber"><span class="font-sans">Số điện thoại</span></label>
                         <div>
-                            <input type="text" class="border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" class="phoneNumber border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
-                        <label for=""><span class="font-sans">Tỉnh/Thành phố</span></label>
+                        <label for="province"><span class="font-sans">Tỉnh/Thành phố</span></label>
                         <div>
-                            <input type="text" class="border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" class="province border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
-                        <label for=""><span class="font-sans">Quận/huyện</span></label>
+                        <label for="district"><span class="font-sans">Quận/huyện</span></label>
                         <div>
-                            <input type="text" class="border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" class="district border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
-                        <label for=""><span class="font-sans">Phường/xã</span></label>
+                        <label for="commune"><span class="font-sans">Phường/xã</span></label>
                         <div>
-                            <input type="text" class="border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" class="commune border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                 </div>
@@ -62,15 +62,16 @@
                     <span class="font-bold">Phương thức vận chuyển</span>
                 </div>
                 <div class="space-x-5">
+                    <input class="px-5 my-3 py-1 border rounded-3xl text-gray-500 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.56)]" value="Nhận tại cửa hàng" type="button"  onclick="choose_delivery_place(this)"></input>
                     <input
                         class="px-5 my-3 py-1 border rounded-3xl text-gray-500 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.56)]"
-                        value="Giao hàng tạo cửa hàng" type="submit"></input>
-                    <input
-                        class="px-5 my-3 py-1 border rounded-3xl text-gray-500 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.56)]"
-                        value="Giao hàng tại nơi ở" type="submit"></input>
+                        value="Giao hàng tận nơi" type="button" onclick="choose_delivery_place(this)"></input>
                 </div>
+                <!--  -->
+                <input type="text" class="hidden"name="recipients" id="delivery_place"></input>
+                <!--  -->
                 <div>
-                    <label for="data">Ngày giao hàng</label> <br>
+                    <label for="date">Ngày giao hàng</label> <br>
                     <input type="date" name="date" class="px-5 my-3 py-1 border rounded-3xl" value="">
                 </div>
                 <div>
@@ -119,19 +120,50 @@
             <div class="border-t border-b py-4 my-3">
                 <div class="flex justify-between items-center">
                     <p>Tổng tiền hàng</p>
-                    <p>123123 d</p>
+                    <p class="font-semibold">
+                        <?php
+                        $total = 0;
+                        $sum = 30000;
+                        if (isset($_SESSION['mycart']) ){
+                            foreach ($_SESSION['mycart'] as $cart) {
+                                $total += $cart[3];
+                            }
+                        }
+                        ?>
+                        <?php echo currency_format($total) ?>
+                    </p>
                 </div>
                 <div class="flex justify-between items-center">
                     <p>Vận chuyển</p>
-                    <p>123123 d</p>
+                    <p id="transpot" class="font-semibold grow">
+
+
+                    <!-- <input type="text" class="" name="transpot" id="transpot" value=""> -->
+                    
+                    </p>
+
+
+
                 </div>
             </div>
             <div class="">
                 <div class="flex justify-between items-center">
                     <p>Tổng thanh toán</p>
-                    <p>123123 d</p>
+                    <p>
+                        <?php
+                        $kq = $total + $sum;
+                        echo $kq;
+                        ?>
+                    </p>
                 </div>
-                <a href=""><button class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4">ĐẶT HÀNG</button></a>
+                <?php
+                        if (isset($_SESSION['mycart']) ){
+                            foreach ($_SESSION['mycart'] as $cart) {
+                                echo '                 <a href="../../controller/add_new_order.php?cartId='.$i.'&userId='.$cart[1].'"><button class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4">ĐẶT HÀNG</button></a>
+                                ';
+                            }
+                        }
+                        ?>
             </div>
         </div>
 
