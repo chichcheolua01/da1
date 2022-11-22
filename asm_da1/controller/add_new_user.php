@@ -10,35 +10,17 @@ if (isset($_POST['btn-signup'])) {
     $userEmail = $_POST['userEmail'];
     $userImage = $_FILES['userImage']['name'];
     $userAccess = 0;
-    $errorFullname = "";
-    $errorUsername = "";
-    $errorEmail = "";
-    $errorPass = "";
     foreach ($users as $value) {
         if ($userName == $value['userName']) {
-            $errorUsername = "Tài khoản đã tồn tại ";
+            $error = "Tài khoản đã tồn tại !";
+            header("Location:/da1/asm_da1/view/user/index.php?act=signup&error=$error");
+        } else {
+            $query = "INSERT INTO users( `userName`, `userPassword`, `userEmail`, `userFullname`, `userAccess`, `userImage`) VALUES ('$userName','$userPassword','$userEmail','$userFullname','$userAccess','$userImage')";
+            connect($query);
+            move_uploaded_file($_FILES["userImage"]["tmp_name"], "../../image/" . $_FILES["userImage"]["name"]);
+            header("Location: ../view/user/index.php?act=signin");
+
         }
-    }
-    if ($userFullname === "") {
-        $errorFullname = "Chưa nhập họ và tên";
-    }
-    if ($userName === "") {
-        $errorUsername = "Chưa nhập tên tài khoản";
-    }
-    if ($userEmail === "") {
-        $errorEmail = "Chưa nhập email";
-    }
-    if ($userPassword === "") {
-        $errorPass = "Chưa nhập mật khẩu";
-    }
-    if ($userPassword != $userRePassword) {
-        $errorPass = "Mật khẩu không trùng khớp";
-    }
-    if ($userName && $userPassword && $userRePassword && $userFullname && $userEmail != "") {
-        $query = "INSERT INTO users( `userName`, `userPassword`, `userEmail`, `userFullname`, `userAccess`, `userImage`) VALUES ('$userName','$userPassword','$userEmail','$userFullname','$userAccess','$userImage')";
-        connect($query);
-        move_uploaded_file($_FILES["userImage"]["tmp_name"], "../../image/" . $_FILES["userImage"]["name"]);
-        header("Location: ../view/user/index.php?act=signin");
     }
 }
 

@@ -1,11 +1,12 @@
-function validate (){
-    var Fullname = document.getElementById("name")
+var Fullname = document.getElementById("name")
     var username = document.getElementById("username")
     var email = document.getElementById("email")
     var pass = document.getElementById("pass")
     var repass = document.getElementById("repass")
     var file = document.getElementById("imageFile")
-    if (Fullname.value==""||username.value==""||email.value==""||pass.value==""||repass.value==""||file=="") {
+function validate (){
+    
+    if (Fullname.value==""||username.value==""||email.value==""||pass.value==""||repass.value==""||repass.value !== pass.value||file.value=="") {
         if (Fullname.value == "") {
             document.querySelector("#errorName").innerHTML="Chưa nhập họ và tên"
         }
@@ -54,7 +55,6 @@ function validate (){
         if (file.value !== "") {
             document.querySelector("#errorImg").innerHTML=""
         }
-        console.log("Not hahaha");
         return false
     }
     else{

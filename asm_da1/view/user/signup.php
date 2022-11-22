@@ -1,17 +1,24 @@
+<?php
+
+?>
 <div class="container mx-auto">
     <div class="w-[990px] mx-auto h-10 border-b-2 ">
         <div class="mx-auto w-[90px] text-center my-2 py-1 border-b-4 border-[#662d91] text-xl font-semibold">ĐĂNG KÝ
         </div>
     </div>
     <div class="w-1/3 mx-auto my-10 shadow-xl">
+        <div class="text-red-500 text-center font-semibold">
+            <?php if (isset($_GET['error'])) {
+                echo "Tài khoản đã tồn tại, hãy chọn tên tài khoản khác !";
+            } ?>
+        </div>
         <form action="../../controller/add_new_user.php" method="POST" enctype="multipart/form-data"
-            class="w-full mx-10" onsubmit="return validate();">
+            class="w-full mx-10" onsubmit="return validate()">
             <div class="py-5">
                 <label for="">Họ và tên</label>
                 <br>
                 <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userFullname" id="name">
                 <div id="errorName" class="text-red-500">
-
                 </div>
             </div>
             <div class="py-5">
