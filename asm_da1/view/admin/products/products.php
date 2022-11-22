@@ -20,6 +20,17 @@
                 </div>
             </div>
         </div>
+        <div class="my-10 border-b-2 py-3">
+            <form action="" method="post">
+                <label class="font-semibold text-gray-500" for="">Tìm kiếm sản phẩm:</label>
+                <input class="border w-1/3 rounded-md h-10 px-1" placeholder="Nhập tên sản phẩm muốn tìm " type="text"
+                    name="txtName" />
+                <button name="btnSearch"
+                    class="bg-green-500 text-white font-semibold px-2 py-2 hover:bg-green-300 rounded-md">
+                    Tìm kiếm
+                </button>
+            </form>
+        </div>
         <div>
             <table class="w-full">
                 <thead>
