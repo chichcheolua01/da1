@@ -20,16 +20,36 @@
                 </div>
             </div>
         </div>
-        <div class="my-10 border-b-2 py-3">
-            <form action="" method="post">
-                <label class="font-semibold text-gray-500" for="">Tìm kiếm sản phẩm:</label>
-                <input class="border w-1/3 rounded-md h-10 px-1" placeholder="Nhập tên sản phẩm muốn tìm " type="text"
-                    name="txtName" />
-                <button name="btnSearch"
-                    class="bg-green-500 text-white font-semibold px-2 py-2 hover:bg-green-300 rounded-md">
-                    Tìm kiếm
-                </button>
+        <div class="my-10 border-b-2 py-3 flex justify-between">
+            <form class="w-1/2" action="" method="post">
+                <div>
+                    <label class="font-semibold text-gray-500" for="">Tìm kiếm sản phẩm:</label>
+                    <br>
+                    <input class="border w-2/3 rounded-md h-10 px-1" placeholder="Nhập tên sản phẩm muốn tìm "
+                        type="text" name="txtName" />
+                    <button name="btnSearch"
+                        class="bg-green-500 text-white font-semibold px-2 py-2 hover:bg-green-700 ease-out duration-200 rounded-md">
+                        Tìm kiếm
+                    </button>
+                </div>
+
             </form>
+            <div class="w-1/2">
+                <label class="font-semibold text-gray-500 float-right" for="">Lọc sản phẩm theo:</label>
+                <br>
+                <select class="border w-1/2 rounded-md h-10 px-1 float-right" name="fillter" id="sort_data"
+                    onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)">
+                    <option value="">
+                        - - -
+                    </option>
+                    <option value="?act=products&sort=asc">
+                        Giá tăng dần
+                    </option>
+                    <option value="?act=products&sort=desc">
+                        Giá giảm dần
+                    </option>
+                </select>
+            </div>
         </div>
         <div>
             <table class="w-full">

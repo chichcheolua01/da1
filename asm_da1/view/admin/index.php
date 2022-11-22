@@ -13,6 +13,16 @@ if (isset($_POST['btnSearch'])) {
     $product_query = "SELECT * FROM `products` WHERE `productName` LIKE '%$prodname%'";
     $products = getAll($product_query);
 }
+if (isset($_GET['sort'])) {
+    if ($_GET['sort'] == "asc") {
+        $product_query = "SELECT * FROM `products` ORDER BY `products`.`productPrice` ASC";
+        $products = getAll($product_query);
+    }
+    if ($_GET['sort'] == "desc") {
+        $product_query = "SELECT * FROM `products` ORDER BY `products`.`productPrice` DESC";
+        $products = getAll($product_query);
+    }
+}
 $user_query = "SELECT * FROM users";
 $users = getAll($user_query);
 if (!function_exists('currency_format')) {
@@ -77,6 +87,7 @@ if (!function_exists('currency_format')) {
     </div>
     <script src="../../main/confirm_delete.js"></script>
     <script src="../../main/preview.js"></script>
+    <script src="../../main/sort_product.js"></script>
 </body>
 
 </html>
