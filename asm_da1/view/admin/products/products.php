@@ -9,7 +9,9 @@
                 <div class="p-[50px] col-span-2 flex flex-col space-y-[10px] items-start">
                     <h3 class="text-5xl font-semibold text-white">Your Products</h3>
                     <p class="text-white">Create Your Product Dashboard in Minutes</p>
-                    <a href="./index.php?act=add_product"><button class="bg-white text-black px-[35px] py-[15px] rounded-2xl font-bold text-sm"> Add product </button></a>
+                    <a href="./index.php?act=add_product"><button
+                            class="bg-white text-black px-[35px] py-[15px] rounded-2xl font-bold text-sm"> Add product
+                        </button></a>
                 </div>
                 <div class="col-span-3 relative overflow-hidden pt-[50px]">
                     <div class="absolute pr-[30px]">
@@ -31,39 +33,53 @@
                     </tr>
                 </thead>
                 <tbody class="">
-                    <?php foreach ($products as $key => $item) : ?>
-                        <?php
+                    <?php foreach ($products as $key => $item): ?>
+                    <?php
                         $categoryId = $item['categoryId'];
                         $category_query = "SELECT * FROM categories WHERE categoryId = $categoryId";
                         $category = getOne($category_query);
                         $productGenderId = $item['productGenderId'];
                         $product_gender_query = "SELECT * FROM product_gender WHERE productGenderId = $productGenderId";
                         $gender = getOne($product_gender_query);
-                        ?>
-                        <tr class="border border-y-[1px] border-gray-200 border-x-0">
-                            <td class="p-[20px]"><img class="w-[100px] h-auto" src="../../image/<?php echo $item['productImage'] ?>" alt=""></td>
-                            <td>
-                                <div>
-                                    <p class="text-sm font-semibold"><?php echo $item['productName'] ?></p>
-                                    <img src="../../image/<?php echo $category['categoryImage'] ?>" alt="">
-                                </div>
-                            </td>
-                            <td class="px-4">
-                                <p class="text-sm font-semibold"><?php echo currency_format($item['productPrice']) ?></p>
-                            </td>
-                            <td class="px-4">
-                                <p class="text-sm font-semibold"><?php echo $item['productView'] ?></p>
-                            </td>
-                            <td class="px-4">
-                                <p class="text-sm font-semibold"><?php echo $gender['productGender'] ?></p>
-                            </td>
-                            <td class="px-4">
-                                <div class="flex flex-col space-y-[10px]"> 
-                                    <a href="./index.php?act=edit_product"><button class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">Sửa</button> </a>
-                                    <a href="../../controller/delete_product.php"><button class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">Xoá</button></a>
-                                </div>
-                            </td>
-                        </tr>
+                    ?>
+                    <tr class="border border-y-[1px] border-gray-200 border-x-0">
+                        <td class="p-[20px]"><img class="w-[100px] h-auto"
+                                src="../../image/<?php echo $item['productImage'] ?>" alt=""></td>
+                        <td>
+                            <div>
+                                <p class="text-sm font-semibold">
+                                    <?php echo $item['productName'] ?>
+                                </p>
+                                <img src="../../image/<?php echo $category['categoryImage'] ?>" alt="">
+                            </div>
+                        </td>
+                        <td class="px-4">
+                            <p class="text-sm font-semibold">
+                                <?php echo currency_format($item['productPrice']) ?>
+                            </p>
+                        </td>
+                        <td class="px-4">
+                            <p class="text-sm font-semibold">
+                                <?php echo $item['productView'] ?>
+                            </p>
+                        </td>
+                        <td class="px-4">
+                            <p class="text-sm font-semibold">
+                                <?php echo $gender['productGender'] ?>
+                            </p>
+                        </td>
+                        <td class="px-4">
+                            <div class="flex flex-col space-y-[10px]">
+                                <a href="./index.php?act=edit_product&productId=<?php echo $item['productId'] ?>"><button
+                                        class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">Sửa</button>
+                                </a>
+                                <button onclick="confirm_del(<?php echo $item['productId'] ?>)"
+                                    class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
+                                    Xoá
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
                     <?php endforeach ?>
                 </tbody>
             </table>

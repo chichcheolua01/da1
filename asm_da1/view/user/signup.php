@@ -9,36 +9,33 @@
             <div class="py-5">
                 <label for="">Họ và tên</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userFullname" required
-                    id="name">
-                <div id="error_name" class="text-red-500">
+                <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userFullname" id="name">
+                <div id="errorName" class="text-red-500">
 
                 </div>
             </div>
             <div class="py-5">
                 <label for="">Tên đăng nhập</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userName" required
-                    id="username">
-                <div id="error_useame" class="text-red-500">
+                <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userName" id="username">
+                <div id="errorusername" class="text-red-500">
 
                 </div>
             </div>
             <div class="py-5">
                 <label for="">Email</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="email" name="userEmail" required
-                    id="email">
-                <div id="error_email" class="text-red-500">
+                <input class="w-[435px] border rounded-full h-[30px] px-5" type="email" name="userEmail" id="email">
+                <div id="erroremail" class="text-red-500">
 
                 </div>
             </div>
             <div class="py-5">
                 <label for="">Mật khẩu</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="password" name="userPassword" required
+                <input class="w-[435px] border rounded-full h-[30px] px-5" type="password" name="userPassword"
                     id="pass">
-                <div id="error_pass" class="text-red-500">
+                <div id="errorpass" class="text-red-500">
 
                 </div>
             </div>
@@ -46,8 +43,8 @@
                 <label for="">Nhập lại mật khẩu</label>
                 <br>
                 <input class="w-[435px] border rounded-full h-[30px] px-5" type="password" name="userRePassword"
-                    required id="repass">
-                <div id="error_repass" class="text-red-500">
+                    id="repass">
+                <div id="errorrepass" class="text-red-500">
                 </div>
             </div>
             <div class="py-5">
@@ -57,12 +54,14 @@
                     <input id="imageFile" type="file" name="userImage" onchange="chooseFile(this)">
                     <img src="" alt="" id="image" class="w-[200px] h-auto  rounded-lg">
                 </div>
-            </div>
-            <div class="py-5 mx-auto">
-                <button type="submit" name="btn-signup"
-                    class="bg-[#662d91] text-white mx-32 w-[200px] py-2 rounded-full">TẠO TÀI
-                    KHOẢN</button>
-            </div>
+                <div id="errorImg" class="text-red-500">
+                </div>
+                <div class="py-5 mx-auto">
+                    <button type="submit" name="btn-signup"
+                        class="bg-[#662d91] text-white mx-32 w-[200px] py-2 rounded-full">TẠO TÀI
+                        KHOẢN</button>
+                </div>
         </form>
     </div>
 </div>
+<script src="../../main/validate.js"></script>
