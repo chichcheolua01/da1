@@ -87,25 +87,34 @@
         <div class="h-1/2 relative shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5 ">
             <div class="">
                 <div class="flex gap-x-1 justify-between">
-                    <img src="../../image/dongho1.png" alt="" class="w-[75px]">
-                    <div class="">
-                        <p class="text-xs">ĐỒNG HỒ NỮ FESTINA F16620/1 skaskldjaskljdklas</p>
-                        <div class="border w-[100px] flex items-center justify-center rounded-2xl mt-4 py-1 space-x-4">
-                            <span>-</span>
-                            <span>1</span>
-                            <span>+</span>
+                <?php
+                $i = 0;
+                if (isset($_SESSION['mycart'])) {
+                    foreach ($_SESSION['mycart'] as $cart) {                    
+                        echo '<img src="../../image/' . $cart[4] . ' " alt="" class="w-[75px]">
+                        <div class="">
+                            <p class="text-xs">' . $cart[2] . '</p>
+                            <div class="border w-[100px] flex items-center justify-center rounded-2xl mt-4 py-1 space-x-4">
+                                <span>-</span>
+                                <span>1</span>
+                                <span>+</span>
+                            </div>
+    
                         </div>
-
-                    </div>
-                    <div class="flex items-start justify-start">
-                    <span class="mr-2 text-xs">131adasds33vnd</span>
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-800">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </a>
-                    </div>
-                </div>
+                        <div class="flex items-start justify-start">
+                        <span class="mr-2 text-xs"> ' . currency_format($cart[3]) . '</span>
+                        <a href="../../controller/delete_cart.php?cartId='.$i.'&userId='.$cart[1].'">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </a>
+                        </div>
+                    </div>';
+                    }
+                    
+            } else {
+                echo "";
+            } ?>
             </div>
             <div class="border-t border-b py-4 my-3">
                 <div class="flex justify-between items-center">
