@@ -2,7 +2,9 @@ const btnCart = document.querySelector("#btnCart");
 const btnClose = document.querySelector("#closeCart");
 const shoppingCart = document.querySelector("#shoppingcart");
 
-console.log(shoppingCart.className);
+
+
+
 btnCart.addEventListener("click", function () {
   console.log("hehe");
   const openCart = shoppingCart.classList;

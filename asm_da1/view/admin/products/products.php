@@ -27,7 +27,7 @@
                     <br>
                     <input class="border w-2/3 rounded-md h-10 px-1" placeholder="Nhập tên sản phẩm muốn tìm "
                         type="text" name="txtName" />
-                    <button name="btnSearch"
+                    <button id="btnSearch" onchange="window.location.href" name="btnSearch"
                         class="bg-green-500 text-white font-semibold px-2 py-2 hover:bg-green-700 ease-out duration-200 rounded-md">
                         Tìm kiếm
                     </button>

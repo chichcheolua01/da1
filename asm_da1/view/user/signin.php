@@ -17,7 +17,11 @@ if (isset($_POST['submit'])) {
                 $_SESSION['userName'] = $login_user['userName'];
                 $_SESSION['userId'] = $login_user['userId'];
                 $_SESSION['userAccess'] = $login_user['userAccess'];
-                header("Location: ./index.php?act=logined&userId=".$_SESSION['userId']);
+                if ($login_user['userAccess'] == 1) {
+                    header("Location: ../admin/index.php?act=logined&userId=" . $_SESSION['userId']);
+                } else {
+                    header("Location: ./index.php?act=logined&userId=" . $_SESSION['userId']);
+                }
             }
         }
     }
@@ -56,11 +60,13 @@ if (isset($_POST['submit'])) {
             <div class="flex justify-center">
                 <a class="underline" href="">Bạn quên mật khẩu ?</a>
             </div>
-            
+
         </form>
         <br>
         <div class="text-center">
-            <a class="" href="./index.php?act=signup"><h1 class="font-medium text-[#662d91] decoration-none">BẠN CHƯA CÓ TÀI KHOẢN?</h1></a>
+            <a class="" href="./index.php?act=signup">
+                <h1 class="font-medium text-[#662d91] decoration-none">BẠN CHƯA CÓ TÀI KHOẢN?</h1>
+            </a>
             <div class="p-5">
                 <a class="underline" href="./index.php?act=signup">Tạo tài khoản</a> có nhiều lợi ích: thanh toán nhanh
                 hơn, giữ nhiều hơn một địa chỉ, theo dõi đơn đặt hàng và hơn thế nữa.
