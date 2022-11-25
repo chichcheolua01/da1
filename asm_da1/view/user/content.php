@@ -67,13 +67,13 @@
                             </div>
                             <div>
                                 <form action="../../controller/add_to_cart.php?" method="POST">
-                                    <input type="text" class="hidden" name="productId" value="<?php echo $id ?>">
+                                    <input type="text" class="hidden" name="productId" value="<?php echo $item['productId']?>">                                    
                                     <input type="text" class="hidden" name="userId" value="<?php echo $userId ?>">
                                     <input type="text" class="hidden" name="productName"
                                         value="<?php echo $item["productName"] ?>">
                                     <input type="text" class="hidden" name="productPrice"
                                         value="<?php echo $item["productPrice"] ?>">
-                                    <input type="text" class="hidden" name="categoryImage"
+                                    <input type="text" class="hidden" name="categoryImage"F
                                         value="<?php echo $item_category["categoryImage"] ?>">
                                     <input type="text" class="hidden" name="productImage"
                                         value="<?php echo $item["productImage"] ?>">

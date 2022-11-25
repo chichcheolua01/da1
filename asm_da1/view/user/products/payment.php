@@ -6,48 +6,47 @@
     <div class="grid grid-cols-3 grid-flow-row-dense gap-4 border-t-2 my-3">
         <!-- Box right -->
         <div class="col-span-2 border shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5">
-            <a href=""><button class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4 ">ĐĂNG NHẬP</button></a>
-            <form action=""  onsubmit="return validate()"  method="post">
+            <form action="../../controller/add_new_order.php" method="POST" onsubmit="return validate()" enctype="multipart/form-data">
                 <div class="mt-5">
                     <label for="email"><span class="font-sans">Địa chỉ email</span></label>
                     <div>
-                        <input type="text" class="email border border-gray-300 px-10 py-1 rounded-2xl  my-2">
+                        <input type="text" name="email" class="email border border-gray-300 px-10 py-1 rounded-2xl  my-2">
                     </div>
                 </div>
                 <!-- 2 row -->
                 <div class="grid grid-cols-2 gap-y-4 border-b-2 pb-3">
                     <div>
-                        <label for="username"><span class="font-sans">Tên</span></label> <br>
-                        <input type="text" class="username border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                        <label for="userName"><span class="font-sans">Tên</span></label> <br>
+                        <input type="text" name="userName" class="username border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                     </div>
                     <div>
                         <label for="address"><span class="font-sans">Địa chỉ đường</span></label>
                         <div>
-                            <input type="text" class="address border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="address" class="address border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
                         <label for="phoneNumber"><span class="font-sans">Số điện thoại</span></label>
                         <div>
-                            <input type="text" class="phoneNumber border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="phoneNumber" class="phoneNumber border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
                         <label for="province"><span class="font-sans">Tỉnh/Thành phố</span></label>
                         <div>
-                            <input type="text" class="province border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="province" class="province border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
                         <label for="district"><span class="font-sans">Quận/huyện</span></label>
                         <div>
-                            <input type="text" class="district border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="district" class="district border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                     <div>
                         <label for="commune"><span class="font-sans">Phường/xã</span></label>
                         <div>
-                            <input type="text" class="commune border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="commune" class="commune border border-gray-300 px-14 py-1 rounded-2xl  my-2">
                         </div>
                     </div>
                 </div>
@@ -68,7 +67,7 @@
                         value="Giao hàng tận nơi" type="button" onclick="choose_delivery_place(this)"></input>
                 </div>
                 <!--  -->
-                <input type="text" class="hidden"name="recipients" id="delivery_place"></input>
+                <input type="text" class="text" name="dispatch_box" id="delivery_place"></input>
                 <!--  -->
                 <div>
                     <label for="date">Ngày giao hàng</label> <br>
@@ -81,11 +80,11 @@
                 </div>
                 <!-- dow 2 end -->
 
-            </form>
+
         </div>
         <!-- Box right end -->
         <!-- Box left -->
-        <div class="h-1/2 relative shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5 ">
+        <div class="h-full relative shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5 ">
             <div class="">
                 <div class="flex gap-x-1 justify-between">
                 <?php
@@ -116,57 +115,17 @@
             } else {
                 echo "";
             } ?>
-            </div>
-            <div class="border-t border-b py-4 my-3">
-                <div class="flex justify-between items-center">
-                    <p>Tổng tiền hàng</p>
-                    <p class="font-semibold">
-                        <?php
-                        $total = 0;
-                        $sum = 30000;
-                        if (isset($_SESSION['mycart']) ){
-                            foreach ($_SESSION['mycart'] as $cart) {
-                                $total += $cart[3];
-                            }
-                        }
-                        ?>
-                        <?php echo currency_format($total) ?>
-                    </p>
-                </div>
-                <div class="flex justify-between items-center">
-                    <p>Vận chuyển</p>
-                    <p id="transpot" class="font-semibold grow">
-
-
-                    <!-- <input type="text" class="" name="transpot" id="transpot" value=""> -->
-                    
-                    </p>
-
-
-
-                </div>
-            </div>
+            <input type="text" name="userId" value="<?php echo $userId ?>">
             <div class="">
                 <div class="flex justify-between items-center">
                     <p>Tổng thanh toán</p>
-                    <p>
-                        <?php
-                        $kq = $total + $sum;
-                        echo $kq;
-                        ?>
-                    </p>
+                    <p>123123 d</p>
                 </div>
-                <?php
-                        if (isset($_SESSION['mycart']) ){
-                            foreach ($_SESSION['mycart'] as $cart) {
-                                echo '                 <a href="../../controller/add_new_order.php?cartId='.$i.'&userId='.$cart[1].'"><button class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4">ĐẶT HÀNG</button></a>
-                                ';
-                            }
-                        }
-                        ?>
+                <button name="submit" class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4">ĐẶT HÀNG</button>
             </div>
         </div>
-
+        </form>
         <!-- Box left end -->
     </div>
 </div>
+<script src="../../main/choose_delivery_place.js"></script>

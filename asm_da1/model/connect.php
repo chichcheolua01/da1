@@ -18,4 +18,11 @@
         $result = connect($query) -> fetch(); ////gọi ra hàm connect đã khai báo bên trên để thực thi, sau đó gọi ra phương thức fetchAll() để lấy ra 1 dữ liệu nhất định
         return $result; //trả về dữ liệu cho hàm 
     }
+    function id($query){
+        $connection = new PDO("mysql:host=localhost;dbname=da1_asm;charset=utf8","root","");
+
+        $connection->exec($query);
+        $last_id = $connection->lastInsertId();
+        return $last_id;
+    }
 ?>
