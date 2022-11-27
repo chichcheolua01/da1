@@ -36,7 +36,7 @@
     </div>
     <hr>
     <div class="w-full py-10 px-[100px]">
-        <div class="grid grid-cols-5">
+        <div class="grid grid-cols-5 gap-10">
             <div class="col-span-2">
                 <div>
                     <h4 class="text-2xl text-purple-800 mb-3">THÔNG TIN LIÊN HỆ</h4>

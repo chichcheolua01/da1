@@ -1,5 +1,5 @@
 <?php
-    if(isset($_SESSION['userId']))
+    if(!isset($_SESSION['userId']))
 {
     header("Location: ./index.php?act=logined&userId=".$_SESSION['userId']);
 }
