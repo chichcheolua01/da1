@@ -1,4 +1,12 @@
 <?php
+if(isset($_SESSION['userId']))
+{
+    header("Location: ./index.php?act=logined&userId=".$_SESSION['userId']);
+}
+else 
+{
+    
+}
 if (isset($_POST['submit'])) {
     $userName = $_POST['userName'];
     $userPassword = $_POST['userPassword'];
