@@ -100,14 +100,16 @@
                             </p>
                         </td>
                         <td class="px-4">
-                            <div class="flex flex-col space-y-[10px]">
+                            <div class="space-y-[10px] flex flex-col">
                                 <a href="./index.php?act=edit_product&productId=<?php echo $item['productId'] ?>"><button
                                         class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">Sửa</button>
                                 </a>
+                                <a href="">
                                 <button onclick="confirm_del(<?php echo $item['productId'] ?>)"
                                     class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
                                     Xoá
                                 </button>
+                                </a>
                             </div>
                         </td>
                     </tr>

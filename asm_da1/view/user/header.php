@@ -89,12 +89,12 @@ if (isset($_GET['userId'])) {
                         </div>
                         <!--  -->
                         <div
-                            class="result_search z-50 bg-white  absolute -bottom-64 shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
+                            class="result_search z-50 bg-white  absolute shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
                         </div>
                         <!--  -->
                     </div>
                 </div>
-
+                
                 <div class="flex space-x-10 items-center">
                     <?php
                     if (isset($_SESSION['userId'])) {
@@ -102,27 +102,31 @@ if (isset($_GET['userId'])) {
                             $userId = $_SESSION['userId'];
                             $query = "SELECT * FROM users WHERE userId = $userId";
                             $getUser = getOne($query);
-                            echo "Chào mừng ", $getUser['userFullname'];
-                            echo '<a id="btnSignout" href="../../controller/signout.php"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-2 text-purple-800">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                          </svg>
-                          </a>';
+                            //echo "<div> Chào mừng ", $getUser['userFullname'].'</div>';
+                            echo '<div class="inline-block focus:outline-none focus:border-white group"><a id="btnSignout" href=""><img class="w-10 h-10 rounded-xl" src="../../image/'.$getUser['userImage'].'" alt="">
+                          </a>
+                            <div class="bg-white absolute rounded-lg py-2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
+                                <a href="../../controller/signout.php" class="block px-4 py-2">Sign out</a>    
+                                <a href="" class="block px-4 py-2">Account setting</a>
+                                
+                            </div>
+                        </div>
+                          
+                          ';
                         }
                     }
                     if (!isset($_SESSION['userId'])) {
-                        echo '<a id="btnSignout" href="./index.php?act=signin"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-2 text-purple-800">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                      </svg>                      
+                        echo '<a id="btnSignout" href="./index.php?act=signin"><img src="../../image/user.svg" alt="">                     
                       </a>';
                     }
                     ?>
+                    
                     <img src="../../image/wishlist.svg" alt="">
                     <button id="btnCart">
                         <img src="../../image/minicart.svg" alt="">
                     </button>
                 </div>
             </div>
-
             <hr class="border-b-2 border-purple-800">
             <div class="flex justify-center">
                 <div class="w-full py-[10px] flex justify-between items-center">

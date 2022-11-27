@@ -1,7 +1,9 @@
 <div class="p-[20px] border border-y-0 border-l-0 border-r-[1px] border-gray-300 w-[40%]">
-    <div class="p-[20px]">
-        <img src="../../image/dashboard_logo.png" alt="">
-    </div>
+    <a href="../user/index.php?act=logined&userId=<?php echo $_GET['userId']?>">
+        <div class="p-[20px]">
+            <img src="../../image/dashboard_logo.png" alt="">
+        </div>
+    </a>
     <div class="py-[20px] px-[5px]">
         <p class="text-sm text-gray-500 font-semibold">Admin tools</p>
         <a href="./index.php?act=overview">

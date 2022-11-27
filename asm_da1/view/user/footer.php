@@ -1,32 +1,32 @@
-<footer class="bg-slate-900 text-white w-full py-20 mt-32">
-    <div class="grid grid-cols-2 container mx-auto">
-        <div class="flex justify-between">
-            <div class="grid grid-cols-3">
-                <div class="px-10">
-                    <p class="text-md font-bold">FIND A STORE</p>
-                    <p class="text-md font-bold">BECOME A MEMBER</p>
-                    <p class="text-md font-bold">SIGN UP FOR EMAIL</p>
-                    <p class="text-md font-bold">SEND US FEED BACK</p>
-                </div>
-                <div class="px-10">
-                    <p class="text-md font-bold">GET HELP</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Order Status</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Delivery</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Returns</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Payment Option</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Contact Us</p>
-                </div>
-                <div class="px-10">
-                    <p class="text-md font-bold">ABOUT NIKE</p>
-                    <p class="text-xs text-gray-500 hover:text-white">News</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Careers</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Investors</p>
-                    <p class="text-xs text-gray-500 hover:text-white">Sustainability</p>
-                </div>
+<footer class="py-[100px]">
+    <div class="w-full bg-purple-800 py-[30px] flex justify-center items-center space-x-[50px]">
+        <div class="flex justify-center space-x-[20px] items-center">
+            <div>
+                <img src="../../image/footer_icon_1.png" alt="">
+            </div>
+            <div class="text-white">
+                <h3 class="text-xl">MUA HÀNG ONLINE 24/7</h3>
+                <p class="text-lg font-medium">Tất cả các ngày trong tuần</p>
             </div>
         </div>
-        <div>
-
+        <div class="flex justify-center space-x-[20px] items-center">
+            <div>
+                <img src="../../image/footer_icon_2.png" alt="">
+            </div>
+            <div class="text-white">
+                <h3 class="text-xl">HOTLINE BÁN HÀNG</h3>
+                <p class="text-lg font-medium">1800 6785</p>
+            </div>
+        </div>
+        <div class="flex justify-center space-x-[20px] items-center">
+            <div>
+                <img src="../../image/footer_icon_3.png" alt="">
+            </div>
+            <div class="text-white">
+                <h3 class="text-xl">HỖ TRỢ KĨ THUẬT</h3>
+                <p class="text-lg font-medium">18006785 Nhánh 2 HN,</p>
+                <p class="text-lg font-medium"> Nhánh 3 HCM </p>
+            </div>
         </div>
     </div>
 </footer>

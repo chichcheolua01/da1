@@ -3,7 +3,7 @@ if(isset($_GET['userId'])){
     $userId = $_GET['userId'];
 }
 ?>
-<body class="border border-red-600">
+<body class="">
     <!-- Product Hot -->
     <section class="content grid grid-cols-5">
         <aside class="filter col-span-1 pr-10">
