@@ -1,6 +1,4 @@
 
-<div id="bodylast" class="min-h-[100vh] absolute inset-y-0">
-</div>
 <!-- Cart -->
 <div id="shoppingcart" class="block top-0 r-0 w-[500px] min-h-[100vh] absolute inset-y-0 right-[100%] bg-white">
     <div class="w-[500px] justify-items-end">

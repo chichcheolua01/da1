@@ -1,18 +1,6 @@
 <body class="">
     <!-- Product Hot -->
     <?php
-    // $receiptId = $_GET['receiptId'];
-    // $cart_query = "SELECT productId FROM receipts_info FULL OUTER JOIN products ON receipts.productId = products.productId WHERE receiptId = $receiptId";
-    // $cart = getAll($cart_query);
-    // var_dump ($cart);
-    // $cart_product_query = "SELECT * FROM products WHERE productId = '$cart'";
-    // $cart_products = getAll($cart_product_query);
-    // var_dump($cart_products);
-    // $receiptId = $_GET['receiptId'];
-    // $cart_query = "SELECT productId FROM receipts_info WHERE receiptId = $receiptId";
-    // $cart = getAll($cart_query);
-    // $cart_product_query = "SELECT * FROM products WHERE exists (SELECT productId FROM receipts_info WHERE receiptId = $receiptId)";
-    // $cart_products = getAll($cart_product_query);
     $userName = "";
     $userId = "";
     if (isset($_SESSION['userName'])) {
@@ -24,14 +12,27 @@
     ?>
     <div class="mx-auto max-w-screen-xl">
         <div class="flex justify-around items-center mb-7 mt-4">
+            <?php 
+            $type = "";
+            $item_query = "";
+            if(isset($_GET['type'])) {
+                $type = $_GET['type'];
+                $item_query = "SELECT * FROM products WHERE productGenderId = $type";
+            } 
+            else {
+                $item_query = "SELECT * FROM products";
+            }    
+            $products = getAll($item_query);
+            ?>
             <h2
                 class="text-xl tracking-widest text-gray-800 pb-2 underline underline-offset-8 decoration-2 decoration-purple-800 grow">
                 SẢN PHẨM BÁN CHẠY</h2>
             <div class="space-x-3">
-                <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-                <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-                <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-                <button class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
+                <a href="./index.php?act=&type=1"><button id="btn-1" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ NAM</button></a>
+                <a href="./index.php?act=&type=2"><button id="btn-2" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ NỮ</button></a>
+                <a href="./index.php?act=&type=3"><button id="btn-3" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐÔI</button></a>
+                <a href="./index.php?act=&type=4"><button id="btn-4" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ UNISEX</button></a>
+                <a href="./index.php?act="><button id="btn-5" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">TẤT CẢ</button></a>
             </div>
         </div>
         <div class="grid mx-auto text-center grid-cols-4 gap-4 ">

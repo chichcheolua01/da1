@@ -103,11 +103,12 @@ if (isset($_GET['userId'])) {
                             $query = "SELECT * FROM users WHERE userId = $userId";
                             $getUser = getOne($query);
                             //echo "<div> Chào mừng ", $getUser['userFullname'].'</div>';
-                            echo '<div class="inline-block focus:outline-none focus:border-white group"><a id="btnSignout" href=""><img class="w-10 h-10 rounded-xl" src="../../image/'.$getUser['userImage'].'" alt="">
+                            echo '<div class="inline-block focus:outline-none focus:border-white group"><a id="btnSignout" href=""><img class="w-10 h-10 rounded-full" src="../../image/'.$getUser['userImage'].'" alt="">
                           </a>
-                            <div class="bg-white absolute rounded-lg py-2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10">
-                                <a href="../../controller/signout.php" class="block px-4 py-2">Sign out</a>    
-                                <a href="" class="block px-4 py-2">Account setting</a>
+                            <div class="bg-white absolute rounded-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10 shadow-2xl border overflow-hidden">
+                            <div><a href="../../controller/signout.php" class="block px-4 py-2 hover:bg-purple-800 hover:text-white font-semibold">Sign out</a>  </div>
+                            <div><a href="" class="block px-4 py-2 hover:bg-purple-800 hover:text-white font-semibold">Account setting</a></div>
+                            <div class="flex px-4 py-2 space-x-2"> <p>Hello</p> <p class="font-semibold">'.  $getUser['userFullname'] .' </p> </div>
                                 
                             </div>
                         </div>
@@ -145,7 +146,7 @@ if (isset($_GET['userId'])) {
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU BÁN CHẠY</li>
                                             <a
-                                                href="./index.php?act=product_list&listId=1&userId=<?php echo $userId; ?>">
+                                                href="./index.php?act=product_list&listId=1">
                                                 <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">
                                                     ORIENT</li>
                                             </a>
