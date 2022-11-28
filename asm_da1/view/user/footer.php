@@ -56,37 +56,37 @@
                     </div>
                 </div>
             </div>
-                <div class="col-span-3">
-                    <div class="grid grid-cols-3 grid-flow-col">
-                        <div>
-                            <h4 class="text-2xl text-purple-800 mb-3">DỊCH VỤ</h4>
-                            <p class="text-lg font-light">In khắc đồng hồ</p>
-                            <p class="text-lg font-light">Galle Care</p>
-                            <p class="text-lg font-light">Sửa chữa đồng hồ</p>
-                            <p class="text-lg font-light">Ưu đãi hội viên Galle</p>
-                        </div>
-                        <div>
-                            <h4 class="text-2xl text-purple-800 mb-3">VỀ CHÚNG TÔI</h4>
-                            <p class="text-lg font-light">Giói thiệu Galle Watch</p>
-                            <p class="text-lg font-light">Chứng nhận thương hiệu</p>
-                            <p class="text-lg font-light">Khách hàng nói gì về chúng tôi</p>
-                            <p class="text-lg font-light">Hệ thống cửa hàng</p>
-                            <p class="text-lg font-light">Chính sách CTV</p>
-                            <p class="text-lg font-light">Hoạt động xã hội</p>
-                        </div>
-                        <div>
-                            <h4 class="text-2xl text-purple-800 mb-3">TIN TỨC</h4>
-                            <p class="text-lg font-light">Khiến thức đồng hồ</p>
-                            <p class="text-lg font-light">Bản tin Galle Watch</p>
-                            <p class="text-lg font-light">Khuyến mãi</p>
-                            <p class="text-lg font-light">Tuyển dụng</p>
-                        </div>
-                        <div class="flex flex-col space-y-10">
-                                        
+            <div class="col-span-3">
+                <div class="grid grid-cols-3 grid-flow-col">
+                    <div>
+                        <h4 class="text-2xl text-purple-800 mb-3">DỊCH VỤ</h4>
+                        <p class="text-lg font-light">In khắc đồng hồ</p>
+                        <p class="text-lg font-light">Galle Care</p>
+                        <p class="text-lg font-light">Sửa chữa đồng hồ</p>
+                        <p class="text-lg font-light">Ưu đãi hội viên Galle</p>
                     </div>
-                    
+                    <div>
+                        <h4 class="text-2xl text-purple-800 mb-3">VỀ CHÚNG TÔI</h4>
+                        <p class="text-lg font-light">Giói thiệu Galle Watch</p>
+                        <p class="text-lg font-light">Chứng nhận thương hiệu</p>
+                        <p class="text-lg font-light">Khách hàng nói gì về chúng tôi</p>
+                        <p class="text-lg font-light">Hệ thống cửa hàng</p>
+                        <p class="text-lg font-light">Chính sách CTV</p>
+                        <p class="text-lg font-light">Hoạt động xã hội</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl text-purple-800 mb-3">TIN TỨC</h4>
+                        <p class="text-lg font-light">Khiến thức đồng hồ</p>
+                        <p class="text-lg font-light">Bản tin Galle Watch</p>
+                        <p class="text-lg font-light">Khuyến mãi</p>
+                        <p class="text-lg font-light">Tuyển dụng</p>
+                    </div>
+                    <div class="flex flex-col space-y-10">
+
+                    </div>
+
                 </div>
-                </div>
+            </div>
         </div>
     </div>
     <hr>
@@ -98,4 +98,6 @@
 </body>
 <script src="../../main/cart.js"></script>
 <script src="../../main/buttons.js"></script>
+<script src="../../main/account.js"></script>
+
 </html>
