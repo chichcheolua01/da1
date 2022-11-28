@@ -50,7 +50,7 @@
 
 </head>
 <?php
-$userHeaderId = "";
+$userId = "";
 if (isset($_GET['userId'])) {
     $userId = $_GET['userId'];
 }
@@ -79,7 +79,7 @@ if (isset($_GET['userId'])) {
                 <div class="flex space-x-20">
                     <div class="relative">
                         <div class="flex items-center border border-purple-800 p-2 rounded-full">
-                            <input type="text" name="search" class="outline-0 px-[10px] search" id="search"
+                            <input type="search" name="search" class="outline-0 px-[10px] search" id="search"
                                 placeholder="Tìm kiếm">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-8 h-8 text-purple-800 font-bold ">
@@ -87,11 +87,13 @@ if (isset($_GET['userId'])) {
                                     d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                             </svg>
                         </div>
-                        <!--  -->
-                        <div
-                            class="result_search z-50 bg-white  absolute shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
-                        </div>
-                        <!--  -->
+                        <!-- Search -->
+
+                            <div class="result_search z-50 bg-white  absolute shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
+
+                            </div>
+
+                        <!-- Search end -->
                     </div>
                 </div>
                 

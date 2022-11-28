@@ -1,13 +1,13 @@
 <?php
 include '../model/connect.php';
-
 $data = $_POST['data'];
 $sql = "SELECT * FROM `products` WHERE `productName` LIKE '%$data%' ORDER BY `productName` limit 0,3 ";
 $products = getAll($sql);
 
 foreach ($products as $key => $item) { ?>
 
-
+<a href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>">
+<input type="text" value="<?php echo $item['productId'] ?>">
 <div class="">
     <div class="result_search flex p-1 items-center">
         <img src="../../image/<?php echo $item["productImage"] ?>" alt="" class="w-[75px]">
@@ -21,6 +21,7 @@ foreach ($products as $key => $item) { ?>
         </div>
     </div>
 </div>
+</a>
 
 <?php }
 
