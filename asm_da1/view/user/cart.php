@@ -1,7 +1,7 @@
 
 <!-- Cart -->
-<div id="shoppingcart" class="block top-0 r-0 w-[500px] min-h-[100vh] absolute inset-y-0 right-[100%] bg-white">
-    <div class="w-[500px] justify-items-end">
+<div id="shoppingcart" class="block top-0 r-0 w-[500px] min-h-[100vh] fixed inset-y-0 right-[100%] bg-white overflow-y-auto overflow-x-hidden  shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
+    <div class="w-[500px] justify-items-end ">
         <div class="w-[500px] mx-auto h-10 border-b-2 flex">
             <div class="mx-auto w-[90px] text-center border-b-4 border-[#662d91] text-xl font-semibold">Giỏ hàng</div>
             <button id="closeCart">
@@ -10,15 +10,15 @@
                 </svg>
             </button>
         </div>
-        <div class="w-[500px] mx-auto grid place-items-end">
-            <div class="min-h-[695px]">
+        <div class="w-[500px] mx-auto grid place-items-end ">
+            <div class="">
                 <?php
                 $i = 0;
                 if (isset($_SESSION['mycart'])) {
                     foreach ($_SESSION['mycart'] as $cart) {
 
                         echo '
-                        <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
+                        <div class="grid grid-cols-4 justify-items-center gap-3 border-b-2 p-1 m-2 ">
                             <div>
                                 <img src="../../image/' . $cart[4] . ' " alt="">
                             </div>
@@ -58,7 +58,7 @@
                     echo "";
                 } ?>
             </div>
-            <div class="bg-gray-100 w-full">
+            <div class="bg-gray-100 w-full sticky bottom-0 right-0">
                 <div class="flex justify-between px-10 py-5">
                     <div class="font-semibold">Tổng tiền hàng</div>
                     <div class="font-semibold">
