@@ -93,14 +93,16 @@ else
         </div>
         <!-- Box right end -->
         <!-- Box left -->
-        <div class="h-full relative shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5 ">
-            <div class="">
-                <div class="flex gap-x-1 justify-between">
+        <div class="relative shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5 ">
+            <div class="grid grid-rows-3">
+
                 <?php
                 $i = 0;
                 if (isset($_SESSION['mycart'])) {
                     foreach ($_SESSION['mycart'] as $cart) {                    
-                        echo '<img src="../../image/' . $cart[4] . ' " alt="" class="w-[75px]">
+                        echo '
+                        <div class="flex gap-x-1 justify-between my-2">
+                        <img src="../../image/' . $cart[4] . ' " alt="" class="w-[75px]">
                         <div class="">
                             <p class="text-xs">' . $cart[2] . '</p>
                             <div class="border w-[100px] flex items-center justify-center rounded-2xl mt-4 py-1 space-x-4">
@@ -112,7 +114,7 @@ else
                         </div>
                         <div class="flex items-start justify-start">
                         <span class="mr-2 text-xs"> ' . currency_format($cart[3]) . '</span>
-                        <a href="../../controller/delete_cart.php?cartId='.$i.'&userId='.$cart[1].'">
+                        <a href="../../controller/delete_products_payment.php?cartId='.$i.'&userId='.$cart[1].'">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-800">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
@@ -124,11 +126,20 @@ else
             } else {
                 echo "";
             } ?>
-            <input type="text" name="userId" value="<?php echo $userId ?>">
+            <input type="hidden" name="userId" value="<?php echo $userId ?>">
             <div class="">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center border-t-2 mt-2">
                     <p>Tổng thanh toán</p>
-                    <p>123123 d</p>
+                    <p>                        
+                        <?php
+                        $total = 0;
+                        if (isset($_SESSION['mycart']) ){
+                            foreach ($_SESSION['mycart'] as $cart) {
+                                $total += $cart[3];
+                            }
+                        }
+                        ?>
+                        <?php echo currency_format($total) ?></p>
                 </div>
                 <button name="submit" class="bg-purple-800 text-white py-1 px-8 rounded-3xl my-4">ĐẶT HÀNG</button>
             </div>
