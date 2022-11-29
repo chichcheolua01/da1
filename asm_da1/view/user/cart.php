@@ -1,16 +1,16 @@
 
 <!-- Cart -->
-<div id="shoppingcart" class="block top-0 r-0 w-[500px] min-h-[100vh] fixed inset-y-0 right-[100%] bg-white overflow-y-auto overflow-x-hidden shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
-    <div class="w-[500px] justify-items-end ">
-        <div class="w-[500px] mx-auto mr-14 h-10 border-b-2 flex">
+<div id="shoppingcart" class="block top-0 r-0 w-[500px] min-h-[100vh] fixed inset-y-0 right-[100%] bg-white overflow-y-scroll overflow-x-hidden shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
+    <div class="w-[500px]  justify-items-end ">
+        <div class="w-[500px] mx-auto h-10 border-b-2 flex">
             <div class="mx-auto w-[90px] text-center border-b-4 border-[#662d91] text-xl font-semibold">Giỏ hàng</div>
-            <button id="closeCart">
+            <button id="closeCart" class="mr-14">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             </button>
         </div>
-        <div class="w-[500px] mx-auto grid place-items-end ">
+        <div class="w-[500px] mx-auto grid box-border min-h-[510px] place-items-end ">
             <div class="grid grid-rows-3 gap-y-3">
                 <?php
                 $i = 0;
