@@ -6,6 +6,8 @@ $product_query = "SELECT * FROM products";
 $products = getAll($product_query);
 $category_query = "SELECT * FROM categories";
 $categories = getAll($category_query);
+$catetype_query = "SELECT * FROM `category_types`";
+$categories_type = getAll($catetype_query);
 $gender_query = "SELECT * FROM product_gender";
 $gender = getAll($gender_query);
 if (isset($_POST['btnSearch'])) {
@@ -75,6 +77,18 @@ if (!function_exists('currency_format')) {
                     case 'add_product':
                         include './products/add_product.php';
                         break;
+                    case 'categories':
+                        include './category/categories.php';
+                        break;
+                    case 'edit_cate':
+                        include './category/edit_cate.php';
+                        break;
+                    case 'add_cate':
+                        include './category/add_cate.php';
+                        break;
+                    case 'accounts':
+                        include './account/accounts.php';
+                        break;
                     default:
                         include './content.php';
                         break;
@@ -88,6 +102,7 @@ if (!function_exists('currency_format')) {
     <script src="../../main/confirm_delete.js"></script>
     <script src="../../main/preview.js"></script>
     <script src="../../main/sort_product.js"></script>
+    <script src="../../main/category.js"></script>
 </body>
 
 </html>
