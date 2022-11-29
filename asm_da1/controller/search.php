@@ -7,7 +7,6 @@ $products = getAll($sql);
 foreach ($products as $key => $item) { ?>
 
 <a href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>">
-<input type="text" value="<?php echo $item['productId'] ?>">
 <div class="">
     <div class="result_search flex p-1 items-center">
         <img src="../../image/<?php echo $item["productImage"] ?>" alt="" class="w-[75px]">

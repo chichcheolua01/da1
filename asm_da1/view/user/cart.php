@@ -1,8 +1,8 @@
 
 <!-- Cart -->
-<div id="shoppingcart" class="block top-0 r-0 w-[500px] min-h-[100vh] fixed inset-y-0 right-[100%] bg-white overflow-y-auto overflow-x-hidden  shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
+<div id="shoppingcart" class="block top-0 r-0 w-[500px] min-h-[100vh] fixed inset-y-0 right-[100%] bg-white overflow-y-auto overflow-x-hidden shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
     <div class="w-[500px] justify-items-end ">
-        <div class="w-[500px] mx-auto h-10 border-b-2 flex">
+        <div class="w-[500px] mx-auto mr-14 h-10 border-b-2 flex">
             <div class="mx-auto w-[90px] text-center border-b-4 border-[#662d91] text-xl font-semibold">Giỏ hàng</div>
             <button id="closeCart">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -11,7 +11,7 @@
             </button>
         </div>
         <div class="w-[500px] mx-auto grid place-items-end ">
-            <div class="">
+            <div class="grid grid-rows-3 gap-y-3">
                 <?php
                 $i = 0;
                 if (isset($_SESSION['mycart'])) {
@@ -58,7 +58,8 @@
                     echo "";
                 } ?>
             </div>
-            <div class="bg-gray-100 w-full sticky bottom-0 right-0">
+        </div>
+        <div class="bg-gray-100 w-full justify-items-end sticky bottom-0">
                 <div class="flex justify-between px-10 py-5">
                     <div class="font-semibold">Tổng tiền hàng</div>
                     <div class="font-semibold">
@@ -82,7 +83,5 @@
                         tục mua sắm</button>
                 </div>
             </div>
-        </div>
     </div>
-</div>
 </div>
