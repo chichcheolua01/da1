@@ -105,10 +105,10 @@
                                         class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">Sửa</button>
                                 </a>
                                 <a href="">
-                                <button onclick="confirm_del(<?php echo $item['productId'] ?>)"
-                                    class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
-                                    Xoá
-                                </button>
+                                    <button onclick="confirm_del(<?php echo $item['productId'] ?>)"
+                                        class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
+                                        Xoá
+                                    </button>
                                 </a>
                             </div>
                         </td>

@@ -4,35 +4,39 @@
     $userName = "";
     $userId = "";
     if (isset($_SESSION['userName'])) {
-      $userName = $_SESSION['userName'];
+        $userName = $_SESSION['userName'];
     }
     if (isset($_SESSION['userId'])) {
-      $userId = $_SESSION['userId'];
+        $userId = $_SESSION['userId'];
     }
     ?>
     <div class="mx-auto max-w-screen-xl">
         <div class="flex justify-around items-center mb-7 mt-4">
-            <?php 
+            <?php
             $type = "";
             $item_query = "";
-            if(isset($_GET['type'])) {
+            if (isset($_GET['type'])) {
                 $type = $_GET['type'];
                 $item_query = "SELECT * FROM products WHERE productGenderId = $type";
-            } 
-            else {
+            } else {
                 $item_query = "SELECT * FROM products";
-            }    
+            }
             $products = getAll($item_query);
             ?>
             <h2
                 class="text-xl tracking-widest text-gray-800 pb-2 underline underline-offset-8 decoration-2 decoration-purple-800 grow">
                 SẢN PHẨM BÁN CHẠY</h2>
             <div class="space-x-3">
-                <a href="./index.php?act=&type=1"><button id="btn-1" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ NAM</button></a>
-                <a href="./index.php?act=&type=2"><button id="btn-2" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ NỮ</button></a>
-                <a href="./index.php?act=&type=3"><button id="btn-3" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐÔI</button></a>
-                <a href="./index.php?act=&type=4"><button id="btn-4" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ UNISEX</button></a>
-                <a href="./index.php?act="><button id="btn-5" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">TẤT CẢ</button></a>
+                <a href="./index.php?act=&type=1"><button id="btn-1"
+                        class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ NAM</button></a>
+                <a href="./index.php?act=&type=2"><button id="btn-2"
+                        class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ NỮ</button></a>
+                <a href="./index.php?act=&type=3"><button id="btn-3"
+                        class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐÔI</button></a>
+                <a href="./index.php?act=&type=4"><button id="btn-4"
+                        class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ UNISEX</button></a>
+                <a href="./index.php?act="><button id="btn-5" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">TẤT
+                        CẢ</button></a>
             </div>
         </div>
         <div class="grid mx-auto text-center grid-cols-4 gap-4 ">
@@ -68,13 +72,14 @@
                             </div>
                             <div>
                                 <form action="../../controller/add_to_cart.php?" method="POST">
-                                    <input type="text" class="hidden" name="productId" value="<?php echo $item['productId']?>">                                    
+                                    <input type="text" class="hidden" name="productId"
+                                        value="<?php echo $item['productId'] ?>">
                                     <input type="text" class="hidden" name="userId" value="<?php echo $userId ?>">
                                     <input type="text" class="hidden" name="productName"
                                         value="<?php echo $item["productName"] ?>">
                                     <input type="text" class="hidden" name="productPrice"
                                         value="<?php echo $item["productPrice"] ?>">
-                                    <input type="text" class="hidden" name="categoryImage"F
+                                    <input type="text" class="hidden" name="categoryImage" F
                                         value="<?php echo $item_category["categoryImage"] ?>">
                                     <input type="text" class="hidden" name="productImage"
                                         value="<?php echo $item["productImage"] ?>">
@@ -129,17 +134,6 @@
             </div>
         </div>
     </div>
-    <script>
-    // const queryString = window.location.search
-    // const urlParams = new URLSearchParams(queryString)
-    // const dataUser = urlParams.get('userId')
-    // console.log(dataUser);
-    // if (dataUser) {
-    //     document.querySelector("#btnSignin").classList.add("hidden")
-    //     document.querySelector("#btnSignout").classList.remove("hidden")
-    // } else {
-    //     document.querySelector("#btnSignin").classList.remove("hidden")
-    //     document.querySelector("#btnSignout").classList.add("hidden")
-    // }
+    <script src="/asm_da1/main/account.js">
     </script>
 </body>

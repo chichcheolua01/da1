@@ -87,16 +87,13 @@ if (isset($_GET['userId'])) {
                                     d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                             </svg>
                         </div>
-                        <!-- Search -->
-
-                            <div class="result_search z-50 bg-white  absolute shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
-
-                            </div>
-
-                        <!-- Search end -->
+                        <!--  -->
+                        <div class="result_search z-50 bg-white  absolute shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] ">
+                        </div>
+                        <!--  -->
                     </div>
                 </div>
-                
+
                 <div class="flex space-x-10 items-center">
                     <?php
                     if (isset($_SESSION['userId'])) {
@@ -105,12 +102,12 @@ if (isset($_GET['userId'])) {
                             $query = "SELECT * FROM users WHERE userId = $userId";
                             $getUser = getOne($query);
                             //echo "<div> Chào mừng ", $getUser['userFullname'].'</div>';
-                            echo '<div class="inline-block focus:outline-none focus:border-white group"><a id="btnSignout" href=""><img class="w-10 h-10 rounded-full" src="../../image/'.$getUser['userImage'].'" alt="">
+                            echo '<div class="inline-block focus:outline-none focus:border-white group"><a id="btnSignout" href=""><img class="w-10 h-10 rounded-full" src="../../image/' . $getUser['userImage'] . '" alt="">
                           </a>
                             <div class="bg-white absolute rounded-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500 z--10 shadow-2xl border overflow-hidden">
                             <div><a href="../../controller/signout.php" class="block px-4 py-2 hover:bg-purple-800 hover:text-white font-semibold">Sign out</a>  </div>
-                            <div><a href="" class="block px-4 py-2 hover:bg-purple-800 hover:text-white font-semibold">Account setting</a></div>
-                            <div class="flex px-4 py-2 space-x-2"> <p>Hello</p> <p class="font-semibold">'.  $getUser['userFullname'] .' </p> </div>
+                            <div><a href="./index.php?act=account" class="block px-4 py-2 hover:bg-purple-800 hover:text-white font-semibold">Account setting</a></div>
+                            <div class="flex px-4 py-2 space-x-2"> <p>Hello</p> <p class="font-semibold">' . $getUser['userFullname'] . ' </p> </div>
                                 
                             </div>
                         </div>
@@ -123,7 +120,7 @@ if (isset($_GET['userId'])) {
                       </a>';
                     }
                     ?>
-                    
+
                     <img src="../../image/wishlist.svg" alt="">
                     <button id="btnCart">
                         <img src="../../image/minicart.svg" alt="">
@@ -147,8 +144,7 @@ if (isset($_GET['userId'])) {
                                     <ul class="p-2">
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">THƯƠNG HIỆU BÁN CHẠY</li>
-                                            <a
-                                                href="./index.php?act=product_list&listId=1">
+                                            <a href="./index.php?act=product_list&listId=1">
                                                 <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">
                                                     ORIENT</li>
                                             </a>

@@ -9,7 +9,8 @@ $categories = getAll($category_query);
 $user_query = "SELECT * FROM users";
 $users = getAll($user_query);
 if (!function_exists('currency_format')) {
-    function currency_format($number, $suffix = 'đ') {
+    function currency_format($number, $suffix = 'đ')
+    {
         if (!empty($number)) {
             return number_format($number, 0, ',', '.') . "{$suffix}";
         }
@@ -38,6 +39,15 @@ if (isset($_GET['act'])) {
             break;
         case 'signup':
             include './signup.php';
+            break;
+        case 'account':
+            include './account/account.php';
+            break;
+        case 'update_email':
+            include './account/update_email.php';
+            break;
+        case 'update_password':
+            include './account/update_password.php';
             break;
         case 'admin':
             include './admin';
