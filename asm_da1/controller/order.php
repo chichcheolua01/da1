@@ -32,7 +32,7 @@ function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$
  function addtocart($orderId,$productId,$userId,$productName,$productPrice,$productImage){
     $query = "INSERT INTO cart
     (
-        orderId, 
+        receiptId, 
         productId,
         userId,
         productName,

@@ -89,6 +89,9 @@ if (!function_exists('currency_format')) {
                     case 'accounts':
                         include './account/accounts.php';
                         break;
+                    case 'receipts':
+                        include './receipts/receipts.php';
+                        break;
                     default:
                         include './content.php';
                         break;
