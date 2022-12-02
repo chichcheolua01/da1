@@ -28,6 +28,7 @@
                         <td class="px-4 font-semibold">Username</td>
                         <td class="px-4 font-semibold">Full name</td>
                         <td class="px-4 font-semibold">Classify</td>
+                        <td class="px-4 font-semibold">Action</td>
                     </tr>
                 </thead>
                 <tbody class="">
@@ -59,6 +60,12 @@
                                 ?>
                             </p>
                         </td>
+                        <td class="px-4">
+                            <button onclick="confirm_deluser(<?php echo $item['userId'] ?>)"
+                                class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
+                                Xoá
+                            </button>
+                        </td>
                     </tr>
                     <?php endforeach ?>
                 </tbody>
@@ -68,3 +75,4 @@
 
 </div>
 </div>
+<script src="../../main/confirm_user.js"></script>

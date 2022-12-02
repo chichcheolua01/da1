@@ -24,6 +24,11 @@ if (isset($_GET['sort'])) {
         $product_query = "SELECT * FROM `products` ORDER BY `products`.`productPrice` DESC";
         $products = getAll($product_query);
     }
+    if (isset($_POST['btnSearch'])) {
+        $prodname = $_POST['txtName'];
+        $product_query = "SELECT * FROM `products` WHERE `productName` LIKE '%$prodname%'";
+        $products = getAll($product_query);
+    }
 }
 $user_query = "SELECT * FROM users";
 $users = getAll($user_query);
