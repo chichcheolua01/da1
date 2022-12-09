@@ -8,6 +8,6 @@ if (isset($_POST['btnAdd'])) {
     $query = "INSERT INTO `categories`( `categoryName`, `categoryImage`, `categoryTypeId`) VALUES ('$name','$imageCate','$type')";
     connect($query);
     move_uploaded_file($_FILES["txtImg"]["tmp_name"], "../image/" . $_FILES['txtImg']['name']);
-    header("Location:/da1/asm_da1/view/admin/index.php?act=categories");
+    header("Location:../view/admin/index.php?act=categories");
 }
 ?>

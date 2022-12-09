@@ -11,7 +11,7 @@ if (isset($_POST['btn-signup'])) {
     $user_query = "SELECT `userName` FROM `users` WHERE `userName`='$userName'";
     if ($users = getAll($user_query) !== []) {
         $error = "Tài khoản đã tồn tại !";
-        header("Location:/da1/asm_da1/view/user/index.php?act=signup&error=$error");
+        header("Location:../view/user/index.php?act=signup&error=$error");
     }
     if ($users = getAll($user_query) === []) {
         $query = "INSERT INTO users( `userName`, `userPassword`, `userEmail`, `userFullname`, `userAccess`, `userImage`) VALUES ('$userName','$userPassword','$userEmail','$userFullname','$userAccess','$userImage')";
