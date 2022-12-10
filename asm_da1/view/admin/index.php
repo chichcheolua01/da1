@@ -1,10 +1,11 @@
 <?php
 ob_start();
 session_start();
+if(!isset($_SESSION['userName']))
+{
+    header("Location: ../user/index.php?act=");
+}
 include '../../model/connect.php';
-
-
-
 if (isset($_POST['btnSearch'])) {
     $prodname = $_POST['txtName'];
     $product_query = "SELECT * FROM `products` WHERE `productName` LIKE '%$prodname%'";

@@ -98,7 +98,7 @@
                 <input type="text" class="hidden" name="productPrice" value="<?php echo $product_info["productPrice"] ?>">
                 <input type="text" class="hidden" name="productImage" value="<?php echo $product_info["productImage"] ?>">
                 <label for="quantity">Số lượng</label>
-                <input type="number" class="border p-2 w-[100px] rounded-lg text-center border-purple-800 " name="quantity" id="" value="1" min="1" >
+                <input type="number" class="border py-2 pl-2 pr-0 w-[80px] rounded-lg text-center border-purple-800 outline-none " name="quantity" id="" value="1" min="1" >
                     <button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"
                         type="submit"> MUA NGAY </button>
                     <div class="flex justify-between">

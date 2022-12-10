@@ -6,70 +6,16 @@
             <p class="w-full flex items-center">
             </p>
             <div class="list_filter">
-                <ul class="">
-                    <li class="items-center border-b-[1px] border-slate-400 mt-2">
-                        <a href="" class="flex  items-center py-4">
-                            THƯƠNG HIỆU
-                            <img src="../../../../../Du_an_1/asm_da1/image/down.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="items-center border-b-[1px] border-slate-400 mt-2">
-                        <a href="" class="flex  items-center py-4">
-                            MỨC CHIẾT KHẤU
-                            <img src="../../../../../Du_an_1/asm_da1/image/down.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="items-center border-b-[1px] border-slate-400 mt-2">
-                        <a href="" class="flex  items-center py-4">
-                            MỨC GIÁ
-                            <img src="../../../../../Du_an_1/asm_da1/image/down.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="items-center border-b-[1px] border-slate-400 mt-2">
-                        <a href="" class="flex  items-center py-4">
-                            GIỚI TÍNH
-                            <img src="../../../../../Du_an_1/asm_da1/image/down.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="items-center border-b-[1px] border-slate-400 mt-2">
-                        <a href="" class="flex  items-center py-4">
-                            LOẠI DÂY
-                            <img src="../../../../../Du_an_1/asm_da1/image/down.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
+                
             </div>
             <!--End .list_filter-->
         </aside> <!-- End .filter -->
         <div class="col-span-4">
-            <div class="nav my-7 flex items-center">
-                <ul class="flex space-x-4">
-                    <li><a class="hover:underline" href="">Trang Chủ</a> | </li>
-                    <li><a class="hover:underline" href="">Đồng hồ</a> | </li>
-                    <li><a class="hover:underline" href="">Giới tính đồng hồ</a> | </li>
-                    <li><a class="text-purple-800 underline" href="">Đồng hồ nam</a></li>
-                </ul>
-                <button class="flex  items-center border border-purple-800 px-4 py-2 rounded-[20px]">
-                    Sản phẩm ưu tiên
-                    <img src="../../../../../Du_an_1/asm_da1/image/down.svg" alt="">
-                </button>
-            </div> <!-- End .nav-->
             <hr class="border border-b-[1px] border-slate-200">
             <div class="flex justify-around items-center mb-7">
-                <!-- <h2
-        class="text-xl tracking-widest text-gray-800 pb-2 underline underline-offset-8 decoration-2 decoration-primary grow">
-        SẢN PHẨM BÁN CHẠY
-        </h2> -->
-                <div class="space-x-3">
-                    <button class="bg-primary text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-                    <button class="bg-primary text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-                    <button class="bg-primary text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-                    <button class="bg-primary text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
-                </div>
             </div>
             <div class="list_product grid mx-auto text-center grid-cols-4 gap-8 ">
                 <?php
-                
                 foreach ($list_products as $key => $item) : ?>
                     <div class="group">
                         <a href="./index.php?act=product_info&productId=<?php echo $item["productId"] ?>">

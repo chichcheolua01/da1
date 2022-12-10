@@ -19,43 +19,43 @@ else
                 <div class="mt-5">
                     <label for="email"><span class="font-sans">Địa chỉ email</span></label>
                     <div>
-                        <input type="text" name="email" class="email border border-gray-300 px-10 py-1 rounded-2xl  my-2">
+                        <input type="text" name="email" class="email border border-gray-300 px-10 py-1 rounded-2xl my-2 outline-none">
                     </div>
                 </div>
                 <!-- 2 row -->
                 <div class="grid grid-cols-2 gap-y-4 border-b-2 pb-3">
                     <div>
                         <label for="userName"><span class="font-sans">Tên</span></label> <br>
-                        <input type="text" name="userName" class="username border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                        <input type="text" name="userName" class="username border border-gray-300 px-14 py-1 rounded-2xl  my-2 outline-none">
                     </div>
                     <div>
                         <label for="address"><span class="font-sans">Địa chỉ đường</span></label>
                         <div>
-                            <input type="text" name="address" class="address border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="address" class="address border border-gray-300 px-14 py-1 rounded-2xl  my-2 outline-none">
                         </div>
                     </div>
                     <div>
                         <label for="phoneNumber"><span class="font-sans">Số điện thoại</span></label>
                         <div>
-                            <input type="text" name="phoneNumber" class="phoneNumber border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="phoneNumber" class="phoneNumber border border-gray-300 px-14 py-1 rounded-2xl  my-2 outline-none">
                         </div>
                     </div>
                     <div>
                         <label for="province"><span class="font-sans">Tỉnh/Thành phố</span></label>
                         <div>
-                            <input type="text" name="province" class="province border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="province" class="province border border-gray-300 px-14 py-1 rounded-2xl  my-2 outline-none">
                         </div>
                     </div>
                     <div>
                         <label for="district"><span class="font-sans">Quận/huyện</span></label>
                         <div>
-                            <input type="text" name="district" class="district border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="district" class="district border border-gray-300 px-14 py-1 rounded-2xl  my-2 outline-none">
                         </div>
                     </div>
                     <div>
                         <label for="commune"><span class="font-sans">Phường/xã</span></label>
                         <div>
-                            <input type="text" name="commune" class="commune border border-gray-300 px-14 py-1 rounded-2xl  my-2">
+                            <input type="text" name="commune" class="commune border border-gray-300 px-14 py-1 rounded-2xl  my-2 outline-none">
                         </div>
                     </div>
                 </div>
@@ -70,9 +70,9 @@ else
                     <span class="font-bold">Phương thức vận chuyển</span>
                 </div>
                 <div class="space-x-5">
-                    <input class="px-5 my-3 py-1 border rounded-3xl text-gray-500 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.56)]" value="Nhận tại cửa hàng" type="button"  onclick="choose_delivery_place(this)"></input>
+                    <input class="px-5 my-3 py-1 border rounded-3xl text-gray-500 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.56)] focus:bg-purple-800 focus:text-white" value="Nhận tại cửa hàng" type="button"  onclick="choose_delivery_place(this)"></input>
                     <input
-                        class="px-5 my-3 py-1 border rounded-3xl text-gray-500 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.56)]"
+                        class="px-5 my-3 py-1 border rounded-3xl text-gray-500 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.56)] focus:bg-purple-800 focus:text-white"
                         value="Giao hàng tận nơi" type="button" onclick="choose_delivery_place(this)"></input>
                 </div>
                 <!--  -->
@@ -101,7 +101,7 @@ else
                 if (isset($_SESSION['mycart'])) {
                     foreach ($_SESSION['mycart'] as $cart) {                    
                         echo '
-                        <div class="flex gap-x-1 justify-between my-2">
+                        <div class="flex gap-x-1 justify-between my-2 outline-none">
                         <img src="../../image/' . $cart[4] . ' " alt="" class="w-[75px]">
                         <div class="">
                             <p class="text-xs">' . $cart[2] . '</p>

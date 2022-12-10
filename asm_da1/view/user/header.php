@@ -150,10 +150,7 @@ if (isset($_GET['userId'])) {
                                                     CERTINA
                                                 </li>
                                             </a>
-                                            <a href="./index.php?act=product_list&categoryId=parker">
-                                                <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">
-                                                    PARKER</li>
-                                            </a>
+                                            
                                     </ul>
                                     <ul class="p-2">
                                         <a href="">
@@ -168,9 +165,7 @@ if (isset($_GET['userId'])) {
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT
                                             </li>
                                         </a>
-                                        <a href="./index.php?act=product_list&categoryId=parker">
-                                            <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">PARKER
-                                            </li>
+                                        
                                         </a>
                                         <a href="./index.php?act=product_list&categoryId=4">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CERTINA
