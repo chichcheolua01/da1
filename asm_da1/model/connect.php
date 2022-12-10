@@ -20,7 +20,6 @@
     }
     function id($query){
         $connection = new PDO("mysql:host=localhost;dbname=da1_asm;charset=utf8","root","");
-
         $connection->exec($query);
         $last_id = $connection->lastInsertId();
         return $last_id;

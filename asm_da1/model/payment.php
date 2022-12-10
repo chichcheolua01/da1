@@ -1,7 +1,7 @@
 <?php 
 require_once "../../model/connect.php";
 
-function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$commune,$dispatch_box,$date,$note,$userId){
+function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$commune,$dispatch_box,$date,$note,$userId,$status){
     $query = "INSERT INTO receipts
     (
         email, 
@@ -14,7 +14,8 @@ function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$
         dispatch_box,
         received_date, 
         note,
-        userId )  VALUES(
+        userId,
+        status )  VALUES(
             '$email'
             ,'$userName',
             '$address',
@@ -25,7 +26,8 @@ function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$
             '$dispatch_box',
             '$date',
             '$note',
-            '$userId')  
+            '$userId',
+            '$status')  
     ";
         return id($query);
         
