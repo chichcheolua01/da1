@@ -24,7 +24,7 @@ if (isset($_GET['act'])) {
             include './products/cart.php';
             break;
         case 'payment':
-            include  '../../controller/receipts/add_new_order.php';
+            include  '../../controller/payment/add_new_order.php';
             break;
         case 'product_list':
             include  '../../controller/products/product_list.php';

@@ -114,13 +114,14 @@ else
                         </div>
                         <div class="flex items-start justify-start">
                         <span class="mr-2 text-xs"> ' . currency_format($cart[3]) . '</span>
-                        <a href="../../controller/delete_products_payment.php?cartId='.$i.'&userId='.$cart[1].'">
+                        <a onclick="dl_pro_pay('.$i.'); ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-800">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </a>
                         </div>
                     </div>';
+                        $i++;
                     }
                     
             } else {

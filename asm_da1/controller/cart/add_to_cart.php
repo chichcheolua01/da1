@@ -2,7 +2,7 @@
 session_start();
 include '../model/connect.php';
 if (!isset($_SESSION['userId'])) {
-    header("location:../view/user/index.php?act=signin");
+    header("location:../../view/user/index.php?act=signin");
 } else {
     $productId = $_POST['productId'];
     $userId = $_POST['userId'];

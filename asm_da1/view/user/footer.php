@@ -100,4 +100,6 @@
 <script src="../../main/buttons.js"></script>
 <script src="../../main/account.js"></script>
 <script src="../../main/choose_delivery_place.js"></script>
+<script src="../../main/confirm_delete_cart.js"></script>
+<script src="../../main/confirm_delete_pro_payment.js"></script>
 </html>

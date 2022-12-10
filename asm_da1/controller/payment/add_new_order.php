@@ -23,5 +23,5 @@ if (isset($_POST['submit'])) {
     }
     header("location: ../../view/user/index.php?act=logined&userId=$userId");
 }
-include '../../view/user/receipts/payment.php';
+include '../../view/user/payment/payment.php';
 ?>
