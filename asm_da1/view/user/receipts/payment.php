@@ -148,4 +148,3 @@ else
         <!-- Box left end -->
     </div>
 </div>
-<script src="../../main/choose_delivery_place.js"></script>

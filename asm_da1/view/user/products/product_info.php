@@ -1,18 +1,4 @@
-<?php
-$id = $_GET['productId'];
-if(isset($_GET['userId'])){
-    $userId = $_GET['userId'];
-}
 
-$one_item_query = "SELECT * FROM products WHERE productId = $id";
-$item = getOne($one_item_query);
-$add_view_query = "UPDATE products SET productView = productView + 1 WHERE productId = $id";
-connect($add_view_query);
-$categoryId = $item['categoryId'];
-$one_category_query = "SELECT * FROM categories WHERE categoryId = $categoryId";
-$item_category = getOne($one_category_query);
-
-?>
 <div class="p-10">
     <div class="flex space-x-10 items-center mb-10">
         <a href="./index.php">
@@ -22,13 +8,13 @@ $item_category = getOne($one_category_query);
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
         </svg>
         <h2 class="">
-            <?php echo $item["productName"] ?>
+            <?php echo $product_info["productName"] ?>
         </h2>
     </div>
     <div class="grid grid-cols-3">
         <div class="flex flex-col items-center space-y-10">
             <div>
-                <img src="../../image/<?php echo $item["productImage"] ?>" alt="">
+                <img src="../../image/<?php echo $product_info["productImage"] ?>" alt="">
             </div>
             <div class="flex space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -38,18 +24,18 @@ $item_category = getOne($one_category_query);
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <p>
-                    <?php echo $item['productView'] ?> lượt xem
+                    <?php echo $product_info['productView'] ?> lượt xem
                 </p>
             </div>
         </div>
         <div class="">
             <h3 class="font-bold text-2xl">
-                <?php echo $item["productName"] ?>
+                <?php echo $product_info["productName"] ?>
             </h3>
             <br>
             <hr class="border-b-1 border-gray-300">
             <div>
-                <img src="../../image/<?php echo $item_category["categoryImage"] ?>" alt="">
+                <img src="../../image/<?php echo $product_info["categoryImage"] ?>" alt="">
                 <div class="flex justify-center items-center">
                     <div
                         class="border border-t-0 border-b-0 border-l-[1px] border-r-[1px] border-gray-600 flex justify-center items-center space-x-2 px-5 text-green-700">
@@ -66,14 +52,14 @@ $item_category = getOne($one_category_query);
                 <p class="text-red-800 font-bold">Giá KM </p>
                 <div class="flex">
                     <p class="text-2xl text-red-800 font-bold">
-                        <?php echo currency_format($item["productPrice"]) ?>
+                        <?php echo currency_format($product_info["productPrice"]) ?>
                     </p>
                 </div>
                 <p class="underline text-red-800 font-bold">đ</p>
                 <p class="font-bold text-sm line-through my-1">
                 <div class="flex justify-center">
                     <p class="text-xl line-through">
-                        <?php echo currency_format($item["productPrice"]) ?>
+                        <?php echo currency_format($product_info["productPrice"]) ?>
                     </p>
                 </div>
                 </p>
@@ -108,9 +94,9 @@ $item_category = getOne($one_category_query);
                 <div class="mt-10 flex flex-col space-y-3">
                 <input type="text" class="hidden" name="productId" value="<?php echo $id?>">
                 <input type="text" class="hidden" name="userId" value="<?php echo $userId?>">
-                <input type="text" class="hidden" name="productName" value="<?php echo $item["productName"] ?>">
-                <input type="text" class="hidden" name="productPrice" value="<?php echo $item["productPrice"] ?>">
-                <input type="text" class="hidden" name="productImage" value="<?php echo $item["productImage"] ?>">
+                <input type="text" class="hidden" name="productName" value="<?php echo $product_info["productName"] ?>">
+                <input type="text" class="hidden" name="productPrice" value="<?php echo $product_info["productPrice"] ?>">
+                <input type="text" class="hidden" name="productImage" value="<?php echo $product_info["productImage"] ?>">
                     <button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"
                         type="submit"> MUA NGAY </button>
                     <div class="flex justify-between">
@@ -246,7 +232,7 @@ $item_category = getOne($one_category_query);
             <hr class="border-b-1 border-gray-300">
             <div class="mt-10">
                 <p class="text-xl font-light">
-                    <?php echo $item['productDesc'] ?>
+                    <?php echo $product_info['productDesc'] ?>
                 </p>
             </div>
         </div>

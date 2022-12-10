@@ -1,16 +1,4 @@
-<?php
-$id = $_GET['productId'];
-$query = "SELECT * FROM products WHERE productId = $id";
-$product = getOne($query);
-$categoryId = $product['categoryId'];
-$genderId = $product['productGenderId'];
-$category_query = "SELECT * FROM categories WHERE categoryId = $categoryId";
-$getCate = getOne($category_query);
 
-$gender_query = "SELECT * FROM product_gender WHERE productGenderId = $genderId";
-$getGender = getOne($gender_query);
-
-?>
 <div class="">
     <div class="px-[300px] pt-[40px]">
         <div class="py-[100px]">
@@ -30,7 +18,7 @@ $getGender = getOne($gender_query);
             </div>
             <div class="my-5">
                 <form class="grid grid-cols-2 gap-3"
-                    action="../../controller/edit_product.php?productId=<?php echo $product['productId'] ?>"
+                    action="./index.php?act=edit_product&productId=<?php echo $product['productId'] ?>"
                     method="POST" enctype="multipart/form-data">
                     <div class="col-span-1">
                         <label class="font-medium text-gray-500" class="font-medium text-gray-500" for="">Product
@@ -50,7 +38,7 @@ $getGender = getOne($gender_query);
                         <select class="border-2 px-1 h-10 w-full my-2 rounded-md border-gray-600" required
                             name="txtCate" id="">
                             <option value="<?php echo $product['categoryId'] ?>">
-                                <?php echo $getCate['categoryName'] ?>
+                                <?php echo $cate['categoryName'] ?>
                             </option>
                             <?php foreach ($categories as $key => $item): ?>
                             <option value="<?php echo $item['categoryId'] ?>">
@@ -64,7 +52,7 @@ $getGender = getOne($gender_query);
                         <select class="border-2 px-1 h-10 w-full my-2 rounded-md border-gray-600" required
                             name="txtGender" id="">
                             <option value="<?php echo $product['productGenderId'] ?>">
-                                <?php echo $getGender['productGender']; ?>
+                                <?php echo $genderId['productGender']; ?>
                             </option>
                             <?php foreach ($gender as $key => $item): ?>
                             <option value="<?php echo $item['productGenderId'] ?>">

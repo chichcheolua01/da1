@@ -2,14 +2,9 @@
 ob_start();
 session_start();
 include '../../model/connect.php';
-$product_query = "SELECT * FROM products";
-$products = getAll($product_query);
-$category_query = "SELECT * FROM categories";
-$categories = getAll($category_query);
-$catetype_query = "SELECT * FROM `category_types`";
-$categories_type = getAll($catetype_query);
-$gender_query = "SELECT * FROM product_gender";
-$gender = getAll($gender_query);
+
+
+
 if (isset($_POST['btnSearch'])) {
     $prodname = $_POST['txtName'];
     $product_query = "SELECT * FROM `products` WHERE `productName` LIKE '%$prodname%'";
@@ -30,8 +25,6 @@ if (isset($_GET['sort'])) {
         $products = getAll($product_query);
     }
 }
-$user_query = "SELECT * FROM users";
-$users = getAll($user_query);
 if (!function_exists('currency_format')) {
     function currency_format($number, $suffix = 'đ')
     {
@@ -61,7 +54,6 @@ if (!function_exists('currency_format')) {
                 ?>
             </div>
         </div>
-
         <div class="col-span-6">
             <?php
             if (isset($_GET['act'])) {
@@ -74,25 +66,34 @@ if (!function_exists('currency_format')) {
                         include './overview.php';
                         break;
                     case 'products':
-                        include './products/products.php';
+                        include  '../../controller/products/insert_product_admin.php';
                         break;
                     case 'edit_product':
-                        include './products/edit_product.php';
+                        include  '../../controller/products/edit_product.php';
                         break;
                     case 'add_product':
-                        include './products/add_product.php';
+                        include  '../../controller/products/add_product.php';
+                        break;
+                    case 'delete_product':
+                        include  '../../controller/products/delete_product.php';
                         break;
                     case 'categories':
-                        include './category/categories.php';
+                        include  '../../controller/category/categories.php';
                         break;
                     case 'edit_cate':
-                        include './category/edit_cate.php';
+                        include  '../../controller/category/edit_cate.php';
                         break;
                     case 'add_cate':
-                        include './category/add_cate.php';
+                        include  '../../controller/category/add_cate.php';
                         break;
                     case 'accounts':
-                        include './account/accounts.php';
+                        include  '../../controller/account/insert_acc_admin.php';
+                        break;
+                    case 'delete_user':
+                        include  '../../controller/account/delete_user.php';
+                        break;
+                    case 'delete_cate':
+                        include  '../../controller/category/delete_cate.php';
                         break;
                     case 'receipts':
                         include './receipts/receipts.php';

@@ -1,19 +1,4 @@
-<?php
-if (isset($_POST['btnUpdate'])) {
-    $userId = $_SESSION['userId'];
-    $email = $_POST['txtEmail'];
-    $password = $_POST['txtPassword'];
-    $query = "SELECT * FROM `users` WHERE userId=$userId";
-    $getUser = getOne($query);
-    if ($password !== $getUser['userPassword']) {
-        $error = "Xác nhận mật khẩu không chính xác";
-    } else {
-        $query_update = "UPDATE `users` SET `userEmail`='$email' WHERE userId=$userId";
-        connect($query_update);
-        header("Location:./index.php?act=account");
-    }
-}
-?>
+
 <div>
     <h1 class="text-2xl text-center">Thiết lập tài khoản</h1>
     <div class="my-5 grid grid-cols-4 gap-5 min-h-screen">

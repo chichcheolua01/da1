@@ -1,32 +1,4 @@
-<?php
-if (isset($_POST['btnUpdate'])) {
-    $userId = $_SESSION['userId'];
-    $password = $_POST['txtPassword'];
-    $new_password = $_POST['txtNewPassword'];
-    $re_password = $_POST['txtRePassword'];
-    $query = "SELECT * FROM `users` WHERE userId=$userId";
-    $getUser = getOne($query);
 
-    if ($password !== $getUser['userPassword']) {
-        $error1 = "Mật khẩu không chính xác";
-    }
-    if ($re_password === "") {
-        $error2 = "Chưa nhập mật khẩu";
-    }
-    if ($new_password !== $re_password) {
-        $error2 = "Xác nhận mật khẩu không chính xác";
-    }
-    if ($new_password === "") {
-        $error = "Chưa nhập mật khẩu mới";
-    }
-    if ($new_password === $re_password && $password === $getUser['userPassword']) {
-        $query_update = "UPDATE `users` SET `userPassword`='$new_password' WHERE userId=$userId";
-        connect($query_update);
-        header("Location:./index.php?act=account");
-    }
-}
-?>
-<div>
     <h1 class="text-2xl text-center">Thiết lập tài khoản</h1>
     <div class="my-5 grid grid-cols-4 gap-5 min-h-screen">
         <div class="col-span-1 bg-gray-100">

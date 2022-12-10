@@ -61,10 +61,10 @@
                             </p>
                         </td>
                         <td class="px-4">
-                            <button onclick="confirm_deluser(<?php echo $item['userId'] ?>)"
+                            <a onclick="return confirm('Bạn có muốn xóa người dùng này?')" href="./index.php?act=delete_user&userId=<?php echo $item['userId'] ?>"
                                 class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
                                 Xoá
-                            </button>
+                            </a>
                         </td>
                     </tr>
                     <?php endforeach ?>

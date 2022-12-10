@@ -65,14 +65,6 @@
                 </thead>
                 <tbody class="">
                     <?php foreach ($products as $key => $item): ?>
-                    <?php
-                        $categoryId = $item['categoryId'];
-                        $category_query = "SELECT * FROM categories WHERE categoryId = $categoryId";
-                        $category = getOne($category_query);
-                        $productGenderId = $item['productGenderId'];
-                        $product_gender_query = "SELECT * FROM product_gender WHERE productGenderId = $productGenderId";
-                        $gender = getOne($product_gender_query);
-                    ?>
                     <tr class="border border-y-[1px] border-gray-200 border-x-0">
                         <td class="p-[20px]"><img class="w-[100px] h-auto"
                                 src="../../image/<?php echo $item['productImage'] ?>" alt=""></td>
@@ -96,7 +88,7 @@
                         </td>
                         <td class="px-4">
                             <p class="text-sm font-semibold">
-                                <?php echo $gender['productGender'] ?>
+                                <?php echo $item['productGender'] ?>
                             </p>
                         </td>
                         <td class="px-4">
@@ -104,8 +96,8 @@
                                 <a href="./index.php?act=edit_product&productId=<?php echo $item['productId'] ?>"><button
                                         class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">Sửa</button>
                                 </a>
-                                <a href="">
-                                    <button onclick="confirm_del(<?php echo $item['productId'] ?>)"
+                                <a onclick="return confirm('Bạn có muốn xóa sản phẩm này không?')" href="./index.php?act=delete_product&productId=<?php echo $item['productId'] ?>">
+                                    <button
                                         class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
                                         Xoá
                                     </button>

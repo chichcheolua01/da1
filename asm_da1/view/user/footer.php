@@ -99,5 +99,5 @@
 <script src="../../main/cart.js"></script>
 <script src="../../main/buttons.js"></script>
 <script src="../../main/account.js"></script>
-
+<script src="../../main/choose_delivery_place.js"></script>
 </html>

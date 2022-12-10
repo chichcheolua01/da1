@@ -48,5 +48,3 @@ function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$
         connect($query);
 
  }
-
-?>

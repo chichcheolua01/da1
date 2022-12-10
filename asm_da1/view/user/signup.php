@@ -12,7 +12,7 @@
                 echo "Tài khoản đã tồn tại, hãy chọn tên tài khoản khác !";
             } ?>
         </div>
-        <form action="../../controller/add_new_user.php" method="POST" enctype="multipart/form-data"
+        <form action="../user/index.php?act=signup" method="POST" enctype="multipart/form-data"
             class="w-full mx-10" onsubmit="return validate()">
             <div class="py-5">
                 <label for="">Họ và tên</label>

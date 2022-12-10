@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="my-5">
-                <form class="grid grid-cols-2 gap-3" action="../../controller/add_product.php" method="POST"
+                <form class="grid grid-cols-2 gap-3" action="./index.php?act=add_product" method="POST"
                     enctype="multipart/form-data" id="formAdd" onsubmit="return check()">
                     <div class="col-span-1">
                         <label class="font-medium text-gray-500" for="">Product

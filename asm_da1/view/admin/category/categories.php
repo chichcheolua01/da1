@@ -45,8 +45,9 @@
                                 <a href="./index.php?act=edit_cate&categoryId=<?php echo $item['categoryId'] ?>"><button
                                         class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">Sửa</button>
                                 </a>
-                                <a href="">
-                                    <button onclick="confirm_delcate(<?php echo $item['categoryId'] ?>)"
+                            
+                                <a onclick="return confirm('Bạn có muốn xóa danh mục này không?')" href="./index.php?act=delete_cate&categoryId=<?php echo $item['categoryId'] ?>">
+                                    <button
                                         class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
                                         Xoá
                                     </button>

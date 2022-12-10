@@ -1,8 +1,4 @@
-<?php
-if(isset($_GET['userId'])){
-    $userId = $_GET['userId'];
-}
-?>
+
 <body class="">
     <!-- Product Hot -->
     <section class="content grid grid-cols-5">
@@ -71,46 +67,6 @@ if(isset($_GET['userId'])){
                     <button class="bg-primary text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐEO TAY</button>
                 </div>
             </div>
-            <?php
-            $listId = "";
-            if (isset($_GET['listId'])) {
-                $listId = $_GET['listId'];
-                $list_query = "SELECT * FROM products WHERE categoryId = $listId";
-                $list_products = getAll($list_query);
-            }
-            $listGender = "";
-            if (isset($_GET['listGender'])) {
-                $listGender = $_GET['listGender'];
-                $list_gender_query = "SELECT * FROM products WHERE productGenderId = $listGender";
-                $list_products = getAll($list_gender_query);
-            }
-            if (isset($_GET['listPrice'])) {
-                $listPrice = $_GET['listPrice'];
-                switch ($listPrice) {
-                    case 'under2': {
-                            $list_price_query = "SELECT * FROM products WHERE productPrice <= 2000000";
-                            break;
-                        }
-                    case '2to5': {
-                            $list_price_query = "SELECT * FROM products WHERE productPrice > 2000000 AND productPrice <= 5000000";
-                            break;
-                        }
-                    case '5to10': {
-                            $list_price_query = "SELECT * FROM products WHERE productPrice > 5000000 AND productPrice <= 10000000";
-                            break;
-                        }
-                    case '10to20': {
-                            $list_price_query = "SELECT * FROM products WHERE productPrice > 10000000 AND productPrice <= 20000000";
-                            break;
-                        }
-                    case '20to50': {
-                            $list_price_query = "SELECT * FROM products WHERE productPrice > 20000000 AND productPrice <= 50000000";
-                            break;
-                        }
-                }
-                $list_products = getAll($list_price_query);
-            }
-            ?>
             <div class="list_product grid mx-auto text-center grid-cols-4 gap-8 ">
                 <?php
                 

@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="my-5">
-                <form class="grid grid-cols-2 gap-3" action="../../controller/add_cate.php" method="POST"
+                <form class="grid grid-cols-2 gap-3" action="./index.php?act=add_cate" method="POST"
                     enctype="multipart/form-data" id="formAddcate" onsubmit="return checkCate()">
                     <div class="col-span-1">
                         <label class="font-medium text-gray-500" for="">Category name</label>
