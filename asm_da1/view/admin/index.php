@@ -43,6 +43,7 @@ if (!function_exists('currency_format')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 </head>
 
 <body>
@@ -63,7 +64,7 @@ if (!function_exists('currency_format')) {
                         include './content.php';
                         break;
                     case 'overview':
-                        include './overview.php';
+                        include  '../../controller/overview.php';
                         break;
                     case 'products':
                         include  '../../controller/products/insert_product_admin.php';
@@ -96,7 +97,13 @@ if (!function_exists('currency_format')) {
                         include  '../../controller/category/delete_cate.php';
                         break;
                     case 'receipts':
-                        include './receipts/receipts.php';
+                        include  '../../controller/receipts/receipts.php';
+                        break;
+                    case 'receipt_detail':
+                        include  '../../controller/receipts/receipt_detail.php';
+                        break;
+                    case 'update_status':
+                        include  '../../controller/receipts/update_status.php';
                         break;
                     default:
                         include './content.php';
