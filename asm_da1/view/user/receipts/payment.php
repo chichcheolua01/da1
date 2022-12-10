@@ -15,7 +15,7 @@ else
     <div class="grid grid-cols-3 grid-flow-row-dense gap-4 border-t-2 my-3">
         <!-- Box right -->
         <div class="col-span-2 border shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] mt-8 p-5">
-            <form action="../../controller/add_new_order.php" method="POST" onsubmit="return validate()" enctype="multipart/form-data">
+            <form action="./index.php?act=payment" method="POST" onsubmit="return validate()" enctype="multipart/form-data">
                 <div class="mt-5">
                     <label for="email"><span class="font-sans">Địa chỉ email</span></label>
                     <div>
@@ -107,7 +107,7 @@ else
                             <p class="text-xs">' . $cart[2] . '</p>
                             <div class="border w-[100px] flex items-center justify-center rounded-2xl mt-4 py-1 space-x-4">
                                 <span>-</span>
-                                <span>1</span>
+                                <span>'.$cart[5].'</span>
                                 <span>+</span>
                             </div>
     

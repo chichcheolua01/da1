@@ -1,4 +1,5 @@
 <?php 
+require_once "../../model/connect.php";
 
 function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$commune,$dispatch_box,$date,$note,$userId){
     $query = "INSERT INTO receipts
@@ -29,7 +30,7 @@ function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$
         return id($query);
         
 }
- function addtocart($orderId,$productId,$userId,$productName,$productPrice,$productImage){
+function addtocart($orderId,$productId,$userId,$productName,$productPrice,$productImage,$quantity){
     $query = "INSERT INTO cart
     (
         receiptId, 
@@ -37,14 +38,16 @@ function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$
         userId,
         productName,
         productPrice, 
-        productImage )  VALUES(
+        productImage,
+        quantity )  VALUES(
             '$orderId',
             '$productId',
             '$userId',
             '$productName',
             '$productPrice',
-            '$productImage')  
+            '$productImage',
+            '$quantity'
+            )  
     ";
         connect($query);
-
  }

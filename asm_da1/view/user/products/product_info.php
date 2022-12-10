@@ -90,13 +90,15 @@
                     </div>
                 </div>
             </div>
-            <form action="../../controller/add_to_cart.php?" method="POST">
+            <form action="../../controller/cart/add_to_cart.php?" method="POST">
                 <div class="mt-10 flex flex-col space-y-3">
                 <input type="text" class="hidden" name="productId" value="<?php echo $id?>">
                 <input type="text" class="hidden" name="userId" value="<?php echo $userId?>">
                 <input type="text" class="hidden" name="productName" value="<?php echo $product_info["productName"] ?>">
                 <input type="text" class="hidden" name="productPrice" value="<?php echo $product_info["productPrice"] ?>">
                 <input type="text" class="hidden" name="productImage" value="<?php echo $product_info["productImage"] ?>">
+                <label for="quantity">Số lượng</label>
+                <input type="number" class="border p-2 w-[100px] rounded-lg text-center border-purple-800 " name="quantity" id="" value="1" min="1" >
                     <button class="w-full rounded-full bg-purple-800 text-white font-extrabold text-xl py-3"
                         type="submit"> MUA NGAY </button>
                     <div class="flex justify-between">
@@ -225,122 +227,18 @@
     </div>
     <hr class="border-b-1 border-gray-300">
     <div class="mt-10 grid grid-cols-5 gap-10">
-        <div class="col-span-3 grid">
+        <div class="col-span-5 grid">
             <div class="border border-b-4 border-t-0 border-r-0 border-l-0 p-5 border-purple-800 w-[30%]">
                 <h2 class="text-2xl font-medium">MÔ TẢ SẢN PHẨM</h2>
             </div>
             <hr class="border-b-1 border-gray-300">
             <div class="mt-10">
-                <p class="text-xl font-light">
+                <p class="text-base font-light">
                     <?php echo $product_info['productDesc'] ?>
                 </p>
             </div>
         </div>
-        <div class="col-span-2">
-            <div class="border border-b-4 border-t-0 border-r-0 border-l-0 p-5 border-purple-800 w-[50%]">
-                <h2 class="text-2xl font-medium">THÔNG SỐ KĨ THUẬT</h2>
-            </div>
-        </div>
-
     </div>
 </div>
 <div id="bodylast" class="min-h-[100vh] absolute inset-y-0">
 </div>
-<!-- Cart -->
-<!-- <div id="shoppingcart" class="fixed block top-0 r-0 w-[500px] min-h-[100vh] absolute inset-y-0 right-[100%] bg-white">
-    <div class="w-[500px] justify-items-end">
-        <div class="w-[500px] mx-auto h-10 border-b-2 flex">
-            <div class="mx-auto w-[90px] text-center border-b-4 border-[#662d91] text-xl font-semibold">Giỏ hàng</div>
-            <button id="closeCart">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </button>
-        </div>
-        <div class="w-[500px] mx-auto grid place-items-end">
-            <div class="min-h-[695px]">
-                <a href="#">
-                    <div class="grid grid-cols-4 justify-items-end gap-3 border-b-2 p-1 m-2">
-                        <div class="col-span-1">
-                            <img src="https://galle.vn/media/catalog/product/cache/4eb977b9e79759bad481a70e526f1a23/r/e/re-av0006y-01_1546484306.png" alt="">
-                        </div>
-                        <div class="col-span-2">
-                            <h1 class="font-semibold">ĐỒNG HỒ NAM ORIENT STAR RE-AV0006Y00B</h1>
-                            <div class="my-5 flex">
-                                Số lượng:
-                                <div class="grid grid-cols-3 rounded-full border w-1/2 flex justify-items-center mx-5">
-                                    <button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-                                        </svg>
-                                    </button>
-                                    1
-                                    <button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="">20.638.000 ₫</div>
-                        </div>
-                        <div class="">
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="bg-gray-100 w-full">
-                <div class="flex justify-between px-10 py-5">
-                    <div class="font-semibold">Tổng tiền hàng</div>
-                    <div class="font-semibold">61.914.000 ₫</div>
-                </div>
-                <div class="px-10 py-5">
-                    <button class="bg-[#662d91] hover:bg-[#662d99] text-white font-semibold w-full rounded-full py-2 my-1">Mua ngay</button>
-                    <button class=" text-[#662d91] border border-[#662d91] font-semibold w-full rounded-full py-2">Tiếp tục mua sắm</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- Cart -->
-<!-- <script>
-    const btnCart = document.querySelector("#btnCart")
-    const btnClose = document.querySelector("#closeCart")
-    const shoppingCart = document.querySelector("#shoppingcart")
-
-    console.log(shoppingCart.className);
-    btnCart.addEventListener('click', function() {
-        console.log("hehe");
-        const openCart = shoppingCart.classList
-        openCart.remove("right-[100%]")
-        openCart.add("right-36")
-        openCart.add("transition")
-        document.querySelector("#bodylast").classList.add("bg-gray-600")
-        document.querySelector("#bodylast").classList.add("w-[1400px]")
-        document.querySelector("#bodylast").classList.add("opacity-25")
-        document.querySelector("body").classList.add("overflow-hidden")
-    })
-    btnClose.addEventListener('click', function() {
-        const closeCart = shoppingCart.classList
-        closeCart.add("right-[100%]")
-        closeCart.remove("right-36")
-        document.querySelector("#bodylast").classList.remove("bg-gray-600")
-        document.querySelector("#bodylast").classList.remove("w-[1400px]")
-        document.querySelector("body").classList.remove("overflow-hidden")
-    })
-    document.querySelector("#bodylast").addEventListener('click', function() {
-        console.log("hahahah");
-        const closeCart = shoppingCart.classList
-        closeCart.add("right-[100%]")
-        closeCart.remove("right-36")
-        document.querySelector("#bodylast").classList.remove("bg-gray-600")
-        document.querySelector("#bodylast").classList.remove("w-[1400px]")
-        document.querySelector("body").classList.remove("overflow-hidden")
-
-    })
-</script> -->

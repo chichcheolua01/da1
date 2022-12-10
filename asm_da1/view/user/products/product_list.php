@@ -103,6 +103,7 @@
                                             <input type="text" class="hidden" name="productName" value="<?php echo $item["productName"] ?>">
                                             <input type="text" class="hidden" name="productPrice" value="<?php echo $item["productPrice"] ?>">
                                             <input type="text" class="hidden" name="productImage" value="<?php echo $item["productImage"] ?>">
+                                            <input type="text" class="hidden" name="quantity" value="1">
                                             <button type="submit" class="bg-purple-800 text-white mt-2 p-2 px-3 w-52 left-12 rounded-3xl transform group-hover:bottom-0 group-hover:left-12 duration-500 absolute -bottom-16"> THÊM
                                                 VÀO GIỎ HÀNG</button>
                                             </form>

@@ -24,7 +24,7 @@ if (isset($_GET['act'])) {
             include './products/cart.php';
             break;
         case 'payment':
-            include './receipts/payment.php';
+            include  '../../controller/receipts/add_new_order.php';
             break;
         case 'product_list':
             include  '../../controller/products/product_list.php';
@@ -60,5 +60,5 @@ if (isset($_GET['act'])) {
 } else {
     include '../../controller/content.php';
 }
-include './receipts/cart.php';
+include './cart/cart.php';
 include './footer.php';

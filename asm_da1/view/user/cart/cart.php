@@ -27,17 +27,15 @@
                                 <div class="my-5 flex">
                                     Số lượng:
                                     <div class="grid grid-cols-3 rounded-full border w-1/2 justify-items-center mx-5">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-                                            </svg>
-                                        </button>
-                                        1
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                            </svg>
-                                        </button>
+                                    <form action="../../controller/cart/quantity.php" method="POST">
+                                        <input type="number" class="w-full " name="quantity" id="" value="' . $cart[5] . '" min="1" >
+                                        <input type="text" class="hidden" name="productId" value="' . $cart[0] .'">
+                                        <button class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                    </svg>
+                                    </button>
+                                  </form>
                                     </div>
                                 </div> 
                                 <div class=""> ' . currency_format($cart[3]) . '</div>
@@ -53,6 +51,7 @@
                             </div>
                         </div>
                         ';
+                        $i++;
                     }
                 } else {
                     echo "";
@@ -67,10 +66,9 @@
                         $total = 0;
                         if (isset($_SESSION['mycart']) ){
                             foreach ($_SESSION['mycart'] as $cart) {
-                                $total += $cart[3];
+                                $total += ($cart[3] * $cart[5]);
                             }
                         }
-
                         ?>
                         <?php echo currency_format($total) ?>
                     </div>
