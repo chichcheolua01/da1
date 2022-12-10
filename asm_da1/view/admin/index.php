@@ -102,6 +102,9 @@ if (!function_exists('currency_format')) {
                     case 'receipt_detail':
                         include  '../../controller/receipts/receipt_detail.php';
                         break;
+                    case 'delete_receipts':
+                        include  '../../controller/receipts/delete_receipts.php';
+                        break;
                     case 'update_status':
                         include  '../../controller/receipts/update_status.php';
                         break;

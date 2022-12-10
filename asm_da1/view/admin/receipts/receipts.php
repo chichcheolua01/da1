@@ -100,7 +100,7 @@
                             </td>
                             <td class="px-4">
                                 <div class="space-y-[10px] flex flex-col">
-                                    <a onclick="return confirm('Bạn có muốn xóa đơn hàng này?')" href="../../controller/delete_receipts.php?receiptId=<?php echo $item['receiptId'] ?>">
+                                    <a onclick="return confirm('Bạn có muốn xóa đơn hàng này?')" href="./index.php?act=delete_receipts&receiptId=<?php echo $item['receiptId'] ?>">
                                         <button class="p-[10px] bg-[#6C5DD3] text-white rounded-2xl font-semibold">
                                             Xoá
                                         </button>
