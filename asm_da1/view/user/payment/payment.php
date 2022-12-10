@@ -76,7 +76,7 @@ else
                         value="Giao hàng tận nơi" type="button" onclick="choose_delivery_place(this)"></input>
                 </div>
                 <!--  -->
-                <input type="text" class="text" name="dispatch_box" id="delivery_place"></input>
+                <input type="text" class="hidden" name="dispatch_box" id="delivery_place"></input>
                 <!--  -->
                 <div>
                     <label for="date">Ngày giao hàng</label> <br>
