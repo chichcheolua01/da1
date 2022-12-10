@@ -12,12 +12,12 @@
             <div class="py-5">
                 <label for="">Tên đăng nhập</label>
                 <br>
-                <input class="w-full border rounded-full h-[30px] px-5" type="text" name="userName" id="">
+                <input class="w-full border border-gray-500 rounded-full h-[30px] px-5 outline-none" type="text" name="userName" placeholder="Username" id="">
             </div>
             <div class="py-5">
                 <label for="">Mật khẩu</label>
                 <br>
-                <input class="w-full border rounded-full h-[30px] px-5" type="password" name="userPassword" id="">
+                <input class="w-full border border-gray-500 outline-none rounded-full h-[30px] px-5" type="password" name="userPassword" placeholder="Password" id="">
             </div>
             <div class="text-red-500">
                 <?php

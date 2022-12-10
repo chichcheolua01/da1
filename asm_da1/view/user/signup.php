@@ -17,14 +17,14 @@
             <div class="py-5">
                 <label for="">Họ và tên</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userFullname" id="name">
+                <input class="w-[435px] border rounded-full h-[30px] px-5 outline-none border-purple-800" type="text" name="userFullname" placeholder="Fullname" id="name">
                 <div id="errorName" class="text-red-500">
                 </div>
             </div>
             <div class="py-5">
                 <label for="">Tên đăng nhập</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="text" name="userName" id="username">
+                <input class="w-[435px] border rounded-full h-[30px] px-5 outline-none border-purple-800" type="text" name="userName" placeholder="Username" id="username">
                 <div id="errorusername" class="text-red-500">
 
                 </div>
@@ -32,7 +32,7 @@
             <div class="py-5">
                 <label for="">Email</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="email" name="userEmail" id="email">
+                <input class="w-[435px] border rounded-full h-[30px] px-5 outline-none border-purple-800" type="email" name="userEmail" placeholder="Email" id="email">
                 <div id="erroremail" class="text-red-500">
 
                 </div>
@@ -40,7 +40,7 @@
             <div class="py-5">
                 <label for="">Mật khẩu</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="password" name="userPassword"
+                <input class="w-[435px] border rounded-full h-[30px] px-5 outline-none border-purple-800" type="password" placeholder="Password" name="userPassword"
                     id="pass">
                 <div id="errorpass" class="text-red-500">
 
@@ -49,7 +49,7 @@
             <div class="py-5">
                 <label for="">Nhập lại mật khẩu</label>
                 <br>
-                <input class="w-[435px] border rounded-full h-[30px] px-5" type="password" name="userRePassword"
+                <input class="w-[435px] border rounded-full h-[30px] px-5 outline-none border-purple-800" type="password" placeholder="Confirm password" name="userRePassword"
                     id="repass">
                 <div id="errorrepass" class="text-red-500">
                 </div>
