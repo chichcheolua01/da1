@@ -43,7 +43,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <form action="../../controller/add_to_cart.php?" method="POST">
+                                        <form action="../../controller/cart/add_to_cart.php?" method="POST">
                                             <input type="text" class="hidden" name="productId" value="<?php echo $item['productId']  ?>">
                                             <input type="text" class="hidden" name="userId" value="<?php echo $userId ?>">
                                             <input type="text" class="hidden" name="productName" value="<?php echo $item["productName"] ?>">

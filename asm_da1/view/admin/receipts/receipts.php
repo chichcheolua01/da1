@@ -84,7 +84,7 @@
                             </td>
                             <td class="px-4">
                                 <form action="./index.php?act=update_status&receiptId=<?php echo $item['receiptId'] ?>" enctype="multipart/form-data" method="post">
-                                    <select class="border-2 px-1 h-10 w-full my-2 rounded-md border-gray-600" name="status" id="status">
+                                    <select class="border-2 px-1 h-10 w-[130px] my-2 rounded-md border-gray-600" name="status" id="status">
                                         <option value="<?php echo $item['status'] ?>">
                                             <?php echo $item['status'] ?>
                                         </option>

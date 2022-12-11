@@ -43,3 +43,24 @@ function getAllProType()
     $categories_type = getAll($catetype_query);
     return $categories_type;
 }
+function searchPro($prodname){
+    $product_query = "SELECT * FROM products JOIN product_gender on products.productGenderId = product_gender.productGenderId WHERE `productName` LIKE '%$prodname%'";
+    $products = getAll($product_query);
+    return $products;
+}
+
+if (isset($_GET['sort'])) {
+    if ($_GET['sort'] == "asc") {
+        $product_query = "SELECT * FROM `products` ORDER BY `products`.`productPrice` ASC";
+        $products = getAll($product_query);
+    }
+    if ($_GET['sort'] == "desc") {
+        $product_query = "SELECT * FROM `products` ORDER BY `products`.`productPrice` DESC";
+        $products = getAll($product_query);
+    }
+    if (isset($_POST['btnSearch'])) {
+        $prodname = $_POST['txtName'];
+        $product_query = "SELECT * FROM `products` WHERE `productName` LIKE '%$prodname%'";
+        $products = getAll($product_query);
+    }
+}

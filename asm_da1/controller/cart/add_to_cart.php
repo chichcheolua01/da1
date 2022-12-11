@@ -10,7 +10,8 @@ if (!isset($_SESSION['userId'])) {
     $productPrice = $_POST['productPrice'];
     $productImage = $_POST['productImage'];
     $quantity = $_POST['quantity'];
-    $arr_cart = array($productId, $userId, $productName, $productPrice, $productImage, $quantity);
+    $status = "Đang xử lí";
+    $arr_cart = array($productId, $userId, $productName, $productPrice, $productImage, $quantity, $status);
 
     if (!isset($_SESSION['mycart'])) {
         $_SESSION['mycart'] = array();

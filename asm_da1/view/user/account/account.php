@@ -10,13 +10,14 @@
                         chỉ email</a></li>
                 <li id="liAcc3" class="py-3 px-5 hover:bg-white rounded-l-md my-2 ml-2"><a href="./index.php?act=update_password">Thay đổi mật
                         khẩu</a></li>
+                <li id="liAcc4" class="py-3 px-5 hover:bg-white rounded-l-md my-2 ml-2"><a href="./index.php?act=receipts">Đơn hàng</a></li>
             </ul>
         </div>
         <div class="col-span-3 px-5">
             <div class="text-gray-500 font-semibold my-5">
                 Họ và tên: <?php echo $user['userFullname'] ?></div>
             <div class="text-gray-500 font-semibold my-5">
-                Tên đăng nhập:  <?php echo $user['userName'] ?>
+                Tên đăng nhập: <?php echo $user['userName'] ?>
             </div>
             <div class="text-gray-500 font-semibold my-5">
                 Địa chỉ email: <?php echo $user['userEmail'] ?>

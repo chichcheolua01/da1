@@ -32,7 +32,7 @@ function taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$
         return id($query);
         
 }
-function addtocart($orderId,$productId,$userId,$productName,$productPrice,$productImage,$quantity){
+function addtocart($orderId,$productId,$userId,$productName,$productPrice,$productImage,$quantity,$status){
     $query = "INSERT INTO cart
     (
         receiptId, 
@@ -41,14 +41,16 @@ function addtocart($orderId,$productId,$userId,$productName,$productPrice,$produ
         productName,
         productPrice, 
         productImage,
-        quantity )  VALUES(
+        quantity,
+        status )  VALUES(
             '$orderId',
             '$productId',
             '$userId',
             '$productName',
             '$productPrice',
             '$productImage',
-            '$quantity'
+            '$quantity',
+            '$status'
             )  
     ";
         connect($query);

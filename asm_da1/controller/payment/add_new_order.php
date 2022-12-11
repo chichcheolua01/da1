@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
     $orderId = taodonhang($email,$userName,$address,$phoneNumber,$province,$district,$commune,$dispatch_box,$date,$note,$userId,$status);
     if (isset($_SESSION['mycart']) && (count($_SESSION['mycart']) > 0)) {
         foreach ($_SESSION['mycart'] as $cart) {
-            addtocart($orderId,$cart[0], $cart[1], $cart[2], $cart[3], $cart[4],$cart[5]);
+            addtocart($orderId,$cart[0], $cart[1], $cart[2], $cart[3], $cart[4],$cart[5],$cart[6]);
         }
         unset($_SESSION['mycart']);
     }

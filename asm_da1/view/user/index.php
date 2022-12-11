@@ -44,6 +44,9 @@ if (isset($_GET['act'])) {
         case 'update_password':
             include '../../controller/account/update_password.php';
             break;
+        case 'receipts':
+            include '../../controller/account/receipts.php';
+            break;
         case 'admin':
             include './admin';
             break;

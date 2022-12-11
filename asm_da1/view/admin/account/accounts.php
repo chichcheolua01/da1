@@ -9,8 +9,8 @@
                 <div class="p-[50px] col-span-2 flex flex-col space-y-[10px] items-start">
                     <h3 class="text-5xl font-semibold text-white">Account</h3>
                     <p class="text-white"></p>
-                    <a href="./index.php?act=add_product"><button
-                            class=" px-[35px] py-[15px] rounded-2xl font-bold text-sm">
+                    <a href="./index.php?act=add_user_admin"><button
+                            class="bg-white text-black px-[35px] py-[15px] rounded-2xl font-bold text-sm"> Add User
                         </button></a>
                 </div>
                 <div class="col-span-3 relative overflow-hidden pt-[50px]">

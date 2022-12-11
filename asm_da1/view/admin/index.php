@@ -1,31 +1,10 @@
 <?php
 ob_start();
 session_start();
-if(!isset($_SESSION['userName']))
-{
+if (!isset($_SESSION['userName'])) {
     header("Location: ../user/index.php?act=");
 }
 include '../../model/connect.php';
-if (isset($_POST['btnSearch'])) {
-    $prodname = $_POST['txtName'];
-    $product_query = "SELECT * FROM `products` WHERE `productName` LIKE '%$prodname%'";
-    $products = getAll($product_query);
-}
-if (isset($_GET['sort'])) {
-    if ($_GET['sort'] == "asc") {
-        $product_query = "SELECT * FROM `products` ORDER BY `products`.`productPrice` ASC";
-        $products = getAll($product_query);
-    }
-    if ($_GET['sort'] == "desc") {
-        $product_query = "SELECT * FROM `products` ORDER BY `products`.`productPrice` DESC";
-        $products = getAll($product_query);
-    }
-    if (isset($_POST['btnSearch'])) {
-        $prodname = $_POST['txtName'];
-        $product_query = "SELECT * FROM `products` WHERE `productName` LIKE '%$prodname%'";
-        $products = getAll($product_query);
-    }
-}
 if (!function_exists('currency_format')) {
     function currency_format($number, $suffix = 'đ')
     {
@@ -90,6 +69,9 @@ if (!function_exists('currency_format')) {
                         break;
                     case 'accounts':
                         include  '../../controller/account/insert_acc_admin.php';
+                        break;
+                    case 'add_user_admin':
+                        include  '../../controller/account/add_user_admin.php';
                         break;
                     case 'delete_user':
                         include  '../../controller/account/delete_user.php';
