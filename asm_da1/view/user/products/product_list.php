@@ -1,18 +1,30 @@
-
 <body class="">
     <!-- Product Hot -->
-    <section class="content grid grid-cols-5">
-        <aside class="filter col-span-1 pr-10">
-            <p class="w-full flex items-center">
-            </p>
-            <div class="list_filter">
-                
-            </div>
-            <!--End .list_filter-->
-        </aside> <!-- End .filter -->
-        <div class="col-span-4">
+    <?php
+    $id = "";
+    if (isset($_GET['categoryId'])) {
+        $id = $_GET['categoryId'];
+        $category_query = "SELECT * FROM categories WHERE categoryId = '$id'";
+        $category = getOne($category_query);
+    } else if (isset($_GET['GenderId'])) {
+        $id = $_GET['GenderId'];
+        $category_query = "SELECT * FROM product_gender WHERE productGenderId = '$id'";
+        $category = getOne($category_query);
+    }
+    ?>
+    <section class="">
+        <div class="">
             <hr class="border border-b-[1px] border-slate-200">
-            <div class="flex justify-around items-center mb-7">
+            <div class="flex justify-around items-center my-7">
+                <div class="w-full">
+                    <img class="w-[1930px] h-[350px] object-cover" src="../../image/<?php
+                                                                        if (isset($_GET['categoryId'])) {
+                                                                            echo $category['categoryBanner'];
+                                                                        } else if (isset($_GET['GenderId'])) {
+                                                                            echo $category['productGenderBanner'];
+                                                                        }
+                                                                        ?>">
+                </div>
             </div>
             <div class="list_product grid mx-auto text-center grid-cols-4 gap-8 ">
                 <?php
@@ -52,7 +64,7 @@
                                             <input type="text" class="hidden" name="quantity" value="1">
                                             <button type="submit" class="bg-purple-800 text-white mt-2 p-2 px-3 w-52 left-12 rounded-3xl transform group-hover:bottom-0 group-hover:left-12 duration-500 absolute -bottom-16"> THÊM
                                                 VÀO GIỎ HÀNG</button>
-                                            </form>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

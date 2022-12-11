@@ -56,7 +56,7 @@
                         
                         <td class="px-4">
                             <p class="text-sm font-semibold">
-                                <?php echo $item['productPrice'] ?>
+                                <?php echo currency_format($item['productPrice']) ?>
                             </p>
                         </td>
                         <td class="px-4">

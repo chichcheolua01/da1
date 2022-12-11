@@ -76,11 +76,10 @@
                     </div>
                 </div>
                 <div class="px-10 py-5">
-                    <a href="../user/index.php?act=payment">
-                    <button class="bg-[#662d91] hover:bg-[#662d99] text-white font-semibold w-full rounded-full py-2 my-1">Mua
-                        ngay</button></a>
-                    <button class=" text-[#662d91] border border-[#662d91] font-semibold w-full rounded-full py-2">Tiếp
-                        tục mua sắm</button>
+                    <a href="../user/index.php?act=payment&userId=<?php echo $_GET['userId']?>">
+                        <button class="bg-[#662d91] hover:bg-[#662d99] text-white font-semibold w-full rounded-full py-2 my-1">Mua ngay</button>
+                    </a>
+                    <button class=" text-[#662d91] border border-[#662d91] font-semibold w-full rounded-full py-2">Tiếp tục mua sắm</button>
                 </div>
             </div>
     </div>

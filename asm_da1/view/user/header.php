@@ -276,10 +276,6 @@ if (isset($_GET['userId'])) {
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TISSOT
                                             </li>
                                         </a>
-                                        <a href="./index.php?act=product_list&categoryId=candino">
-                                            <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CANDINO
-                                            </li>
-                                        </a>
                                         <a href="./index.php?act=product_list&categoryId=1">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT
                                             </li>

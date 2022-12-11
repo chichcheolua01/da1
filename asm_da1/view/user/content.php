@@ -10,8 +10,7 @@
                 <a href="./index.php?act=&type=2"><button id="btn-2" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ NỮ</button></a>
                 <a href="./index.php?act=&type=3"><button id="btn-3" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ ĐÔI</button></a>
                 <a href="./index.php?act=&type=4"><button id="btn-4" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">ĐỒNG HỒ UNISEX</button></a>
-                <a href="./index.php?act="><button id="btn-5" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">TẤT
-                        CẢ</button></a>
+                <a href="./index.php?act="><button id="btn-5" class="bg-purple-800 text-white p-2 px-3 rounded-3xl">TẤT CẢ</button></a>
             </div>
         </div>
         <div class="grid mx-auto text-center grid-cols-4 gap-4 ">
