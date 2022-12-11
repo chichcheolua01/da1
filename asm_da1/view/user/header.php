@@ -198,7 +198,7 @@ if (isset($_GET['userId'])) {
                                         <a href="">
                                             <li class="block font-semibold text-xl mb-5">ĐỒNG HỒ NHẬT BẢN</li>
                                         </a>
-                                        <a href="./index.php?act=product_list&categoryId=1_star">
+                                        <a href="./index.php?act=product_list&categoryId=1">
                                             <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">ORIENT
                                                 STAR
                                             </li>
@@ -520,35 +520,7 @@ if (isset($_GET['userId'])) {
                                             </li>
                                         </a>
                                     </ul>
-                                    <ul class="p-2">
-                                        <a href="">
-                                            <li class="block font-semibold text-xl mb-5">DANH MỤC TIN</li>
-                                        </a>
-                                        <a href="./index.php?act=product_list&categoryId=">
-                                            <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">TIN TỨC
-                                                NỔI
-                                                BẬT</li>
-                                        </a>
-                                        <a href="./index.php?act=product_list&categoryId=">
-                                            <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">KIẾN
-                                                THỨC
-                                                ĐỒNG HỒ</li>
-                                        </a>
-                                        <a href="./index.php?act=product_list&categoryId=">
-                                            <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">BẢN TIN
-                                                THƯƠNG HIỆU</li>
-                                        </a>
-                                        <a href="./index.php?act=product_list&categoryId=">
-                                            <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">CÔNG
-                                                VIỆC
-                                                TẠI GALLE</li>
-                                        </a>
-                                        <a href="./index.php?act=product_list&categoryId=">
-                                            <li class="block p-2 hover:bg-white hover:text-black cursor-pointer">VIDEO
-                                                NỔI
-                                                BẬT</li>
-                                        </a>
-                                    </ul>
+
 
                                 </div>
                             </li>

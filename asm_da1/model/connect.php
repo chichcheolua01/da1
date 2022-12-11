@@ -1,7 +1,7 @@
 <?php
     // hàm kết nối tới database và thực thi 
     function connect($query){
-        $connection = new PDO("mysql:host=localhost;dbname=da1_asm;charset=utf8","root","");
+        $connection = new PDO("mysql:host=localhost;dbname=d;charset=utf8","root","");
         $stmt = $connection -> prepare($query);
         $stmt -> execute();
         return $stmt; //trả về giá trị cho hàm để tiếp tục thực hiện ở các hàm khác

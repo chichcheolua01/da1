@@ -1,5 +1,10 @@
 <?php
 require_once "../../model/payment.php";
+require_once "../../model/account/account.php";
+if (isset($_SESSION['userId'])) {
+    $userId = $_SESSION['userId'];
+    $user = getUser($userId);
+}
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
@@ -21,6 +26,7 @@ if (isset($_POST['submit'])) {
         }
         unset($_SESSION['mycart']);
     }
+
     header("location: ../../view/user/index.php?act=logined&userId=$userId");
 }
 include '../../view/user/payment/payment.php';

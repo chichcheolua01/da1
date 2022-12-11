@@ -1,12 +1,4 @@
-<?php
-if (!isset($_SESSION['userId'])) {
-    header("Location: ./index.php?act=logined&userId=" . $_SESSION['userId']);
-} else {
-}
-$userId = $_GET["userId"];
-$user_query = "SELECT * FROM users WHERE userId = '$userId'";
-$user = getOne($user_query);
-?>
+
 <div class="container mx-auto">
     <h2 class="text-xl tracking-widest text-gray-800 font-bold p-2 underline underline-offset-[12px] decoration-2 decoration-purple-800 text-center">
         THANH TOÁN</h2>
